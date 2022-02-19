@@ -15,8 +15,8 @@ MonoBehaviour:
   DatabaseType: 0
   CategoryNames:
   - Custom
-  - Example
   - General
+  - MainMenu
   Categories:
-  - {fileID: 11400000, guid: 40f9e81ff80114a47a3721228ba749ed, type: 2}
   - {fileID: 11400000, guid: 5a90d85a8dd98ca47849d8161385cd79, type: 2}
+  - {fileID: 11400000, guid: a6d67638b2f425844940c46b18a04f5c, type: 2}

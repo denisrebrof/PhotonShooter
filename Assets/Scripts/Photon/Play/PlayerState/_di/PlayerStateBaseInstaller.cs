@@ -1,9 +1,9 @@
-﻿using Photon.Player.PlayerState.data;
-using Photon.Player.PlayerState.domain;
+﻿using Photon.Play.PlayerState.data;
+using Photon.Play.PlayerState.domain;
 using UnityEngine;
 using Zenject;
 
-namespace Photon.Player.PlayerState._di
+namespace Photon.Play.PlayerState._di
 {
     [CreateAssetMenu(menuName = "Installers/PlayerStateBaseInstaller")]
     public class PlayerStateBaseInstaller: ScriptableObjectInstaller

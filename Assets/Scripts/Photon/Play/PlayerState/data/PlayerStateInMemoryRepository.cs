@@ -1,8 +1,8 @@
 ﻿using System;
-using Photon.Player.PlayerState.domain;
+using Photon.Play.PlayerState.domain;
 using UniRx;
 
-namespace Photon.Player.PlayerState.data
+namespace Photon.Play.PlayerState.data
 {
     public class PlayerStateInMemoryRepository : IPlayerStateRepository
     {

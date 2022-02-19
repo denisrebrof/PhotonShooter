@@ -1,4 +1,4 @@
-﻿namespace Photon.Player.PlayerState.domain
+﻿namespace Photon.Play.PlayerState.domain
 {
     public enum PlayerState
     {

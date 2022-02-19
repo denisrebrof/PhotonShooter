@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Linq;
 using CrazyGames;
 using Plugins.VKSDK;
@@ -41,8 +42,9 @@ public class SDKInstaller : ScriptableObjectInstaller
     
     private void InstallGameStateNavigator()
     {
-        var gameStateNavigator = FindObjectsOfType<MonoBehaviour>().OfType<IGameStateNavigator>().First(); 
-        Container.Bind<IGameStateNavigator>().FromInstance(gameStateNavigator).AsSingle();
+        var navigators = FindObjectsOfType<MonoBehaviour>().OfType<IGameStateNavigator>().ToList();
+        if(!navigators.Any()) return;
+        Container.Bind<IGameStateNavigator>().FromInstance(navigators.First()).AsSingle();
     }
 
     private void InstallSDK()

@@ -1,15 +1,15 @@
-﻿using System;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
+using static Photon.ShootEffect.HitEffectType;
 
 namespace Photon.Health
 {
-    public class SimpleShooting: MonoBehaviourPun
+    public class SimpleShooting : MonoBehaviourPun
     {
         private Camera cam;
-        [SerializeField]
-        private ParticleSystem shootPart;
+        [SerializeField] private ParticleSystem shootPart;
+        [SerializeField] private ShootEffect shootEffect;
         public UnityEvent onShoot;
 
         private void Start()
@@ -23,17 +23,26 @@ namespace Photon.Health
                 Shoot();
         }
 
-        void Shoot()
+        private void Shoot()
         {
-            onShoot.Invoke();
             ShootEffect();
             var ray = cam.ViewportPointToRay(new Vector3(0.5f, 0.5f));
             ray.origin = cam.transform.position;
-            if(Physics.Raycast(ray, out RaycastHit hit))
-                hit.collider.gameObject.GetComponent<HealthHandler>()?.TakeDamage(10);
+            var sourceTransform = shootPart.transform;
+            if (!Physics.Raycast(ray, out RaycastHit hit))
+            {
+                var position = sourceTransform.position;
+                shootEffect.HandleShoot(position, position + cam.transform.forward * 10f, None);
+                return;
+            }
+
+            var health = hit.collider.gameObject.GetComponent<HealthHandler>();
+            if (health != null) health.TakeDamage(10);
+
+            shootEffect.HandleShoot(sourceTransform.position, hit.point, health != null ? Player : Ground);
         }
-        
-        void ShootEffect()
+
+        private void ShootEffect()
         {
             photonView.RPC("RPC_ShootEffect", RpcTarget.All);
         }
@@ -41,6 +50,7 @@ namespace Photon.Health
         [PunRPC]
         public void RPC_ShootEffect()
         {
+            onShoot.Invoke();
             shootPart.Play();
         }
     }

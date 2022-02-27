@@ -10,6 +10,7 @@ namespace Photon.Health
         [SerializeField]
         private int health = 100;
         public UnityEvent<int> healthChanged;
+        public UnityEvent damageTaken;
 
         private void Start()
         {
@@ -24,6 +25,7 @@ namespace Photon.Health
 
         public void TakeDamage(int damage)
         {
+            damageTaken.Invoke();
             photonView.RPC("RPC_TakeDamage", RpcTarget.All, damage);
         }
 

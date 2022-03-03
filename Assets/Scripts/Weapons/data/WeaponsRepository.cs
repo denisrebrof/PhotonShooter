@@ -2,7 +2,6 @@
 using System.Linq;
 using Weapons.data.dao;
 using Weapons.data.models;
-using Weapons.domain;
 using Weapons.domain.model;
 using Weapons.domain.repositories;
 using Zenject;
@@ -25,8 +24,8 @@ namespace Weapons.data
                 ConvertToWeapon(entity, (long) index)
             ).ToList();
 
-        private static Weapon ConvertToWeapon(WeaponEntity entity, long id) => new Weapon(
-            id = id,
+        private static Weapon ConvertToWeapon(WeaponEntity entity, long weaponId) => new(
+            weaponId,
             entity.Name,
             entity.AmmoCapacity,
             entity.Type

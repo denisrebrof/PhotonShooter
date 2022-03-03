@@ -15,7 +15,7 @@ namespace Ammo.domain
         public ReloadAmmoResult ReloadAmmo()
         {
             if (!selectedWeaponRepository.GetSelectedWeapon(out var selectedWeapon)) return NoWeapon;
-            if (selectedWeapon.Type == Weapon.DamageType.Melee) return NotReloadable;
+            if (!selectedWeapon.IsAmmoAvailable()) return NotReloadable;
             if (selectedWeapon.AmmoCapacity == ammoRepository.GetLoadedAmmoCount()) return FullAmmo; 
             ammoRepository.SetLoadedAmmo(selectedWeapon.AmmoCapacity);
             ammoStateRepository.SetAmmoState(AmmoState.Full);

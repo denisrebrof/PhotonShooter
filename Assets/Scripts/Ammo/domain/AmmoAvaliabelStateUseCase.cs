@@ -1,4 +1,5 @@
 ﻿using System;
+using Ammo.domain.model;
 using UniRx;
 using Weapons.domain.repositories;
 using Zenject;
@@ -12,6 +13,11 @@ namespace Ammo.domain
 
         public IObservable<bool> GetAmmoAvailableStateFlow() => selectedWeaponRepository
             .GetSelectedWeaponFlow()
-            .Select(weapon => weapon.Type == Melee);
+            .Select(weapon => weapon.Type != Melee);
+
+        public bool GetAmmoAvailableState()
+        {
+            return selectedWeaponRepository.GetSelectedWeapon(out var weapon) && weapon.IsAmmoAvailable();
+        }
     }
 }

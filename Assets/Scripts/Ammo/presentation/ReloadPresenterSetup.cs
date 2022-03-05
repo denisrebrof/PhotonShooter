@@ -6,15 +6,15 @@ namespace Ammo.presentation
     public class ReloadPresenterSetup : MonoBehaviour
     {
         [Inject] private ReloadingNavigator navigator;
-        private IReloadPresenter presenter;
-        private void Awake() => presenter = GetComponent<IReloadPresenter>();
+        private IReloadHandler handler;
+        private void Awake() => handler = GetComponent<IReloadHandler>();
 
         private void OnEnable()
         {
-            if (presenter == null)
+            if (handler == null)
                 Debug.LogError("Reload presenter setup failed - presenter not found!");
 
-            navigator.SetReloadPresenter(presenter);
+            navigator.SetReloadPresenter(handler);
         }
     }
 }

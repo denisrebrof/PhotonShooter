@@ -2,12 +2,12 @@
 
 namespace Ammo.presentation
 {
-    public interface IReloadPresenter
+    public interface IReloadHandler
     {
-        IObservable<ReloadingPresenterResult> StartReloading();
+        IObservable<ReloadingHandlerResult> StartReloading();
         void AbortReloading();
 
-        public enum ReloadingPresenterResult
+        public enum ReloadingHandlerResult
         {
             Completed,
             Aborted

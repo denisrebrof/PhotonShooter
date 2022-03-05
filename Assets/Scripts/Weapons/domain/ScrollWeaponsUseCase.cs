@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Linq;
+using Weapons.domain.model;
 using Weapons.domain.repositories;
 using Zenject;
 
@@ -10,10 +11,11 @@ namespace Weapons.domain
         [Inject] private ISelectedWeaponRepository selectedWeaponRepository;
         [Inject] private IWeaponsRepository weaponsRepository;
 
-        public void ScrollWeapon(ScrollDirection direction)
+        public SelectWeaponResult ScrollWeapon(ScrollDirection direction)
         {
             var weapons = weaponsRepository.GetAvailableWeapons();
-            if (weapons.Count == 0 || !selectedWeaponRepository.GetSelectedWeapon(out var selectedWeapon)) return;
+            if (weapons.Count == 0 || !selectedWeaponRepository.GetSelectedWeapon(out var selectedWeapon)) 
+                return SelectWeaponResult.Failure;
 
             var scrolledToWeaponIndex = 0;
             if (weapons.All(weapon => weapon.ID != selectedWeapon.ID))
@@ -28,6 +30,7 @@ namespace Weapons.domain
             }
 
             selectedWeaponRepository.SetSelectedWeapon(weapons[scrolledToWeaponIndex].ID);
+            return SelectWeaponResult.Success;
         }
 
         public enum ScrollDirection

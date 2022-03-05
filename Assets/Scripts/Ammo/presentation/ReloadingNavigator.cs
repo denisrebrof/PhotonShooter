@@ -14,29 +14,29 @@ namespace Ammo.presentation
         [Inject] private IAmmoStateRepository ammoStateRepository;
         [Inject] private AmmoAvailableStateUseCase ammoAvailableStateUseCase;
 
-        [CanBeNull] private IReloadPresenter reloadPresenter;
+        [CanBeNull] private IReloadHandler reloadHandler;
 
         public IObservable<ReloadingResult> StartReloading()
         {
-            if (reloadPresenter == null) return Observable.Return(ReloadingResult.WrongState);
+            if (reloadHandler == null) return Observable.Return(ReloadingResult.WrongState);
 
             var currentState = ammoStateRepository.GetAmmoState();
             var reloadableAmmoState = currentState is AmmoState.Empty or AmmoState.Loaded;
             var ammoAvailableState = ammoAvailableStateUseCase.GetAmmoAvailableState();
             if (!reloadableAmmoState || !ammoAvailableState) return Observable.Return(ReloadingResult.WrongState);
 
-            return reloadPresenter.StartReloading().Select(GetReloadingResult);
+            return reloadHandler.StartReloading().Select(GetReloadingResult);
         }
 
-        private static ReloadingResult GetReloadingResult(IReloadPresenter.ReloadingPresenterResult presenterResult)
+        private static ReloadingResult GetReloadingResult(IReloadHandler.ReloadingHandlerResult handlerResult)
         {
             ReloadingResult reloadingResult;
-            switch (presenterResult)
+            switch (handlerResult)
             {
-                case IReloadPresenter.ReloadingPresenterResult.Completed:
+                case IReloadHandler.ReloadingHandlerResult.Completed:
                     reloadingResult = ReloadingResult.Success;
                     break;
-                case IReloadPresenter.ReloadingPresenterResult.Aborted:
+                case IReloadHandler.ReloadingHandlerResult.Aborted:
                     reloadingResult = ReloadingResult.Stopped;
                     break;
                 default:
@@ -48,10 +48,10 @@ namespace Ammo.presentation
             return reloadingResult;
         }
 
-        public void SetReloadPresenter(IReloadPresenter presenter)
+        public void SetReloadPresenter(IReloadHandler handler)
         {
-            reloadPresenter?.AbortReloading();
-            reloadPresenter = presenter;
+            reloadHandler?.AbortReloading();
+            reloadHandler = handler;
         }
 
         public enum ReloadingResult

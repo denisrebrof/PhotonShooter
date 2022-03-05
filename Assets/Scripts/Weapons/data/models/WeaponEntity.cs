@@ -1,4 +1,5 @@
-﻿using Weapons.domain;
+﻿using UnityEngine;
+using Weapons.domain;
 using Weapons.domain.model;
 
 namespace Weapons.data.models
@@ -8,5 +9,7 @@ namespace Weapons.data.models
         public string Name;
         public int AmmoCapacity;
         public Weapon.DamageType Type;
+        public Sprite preview;
+        public GameObject prefab;
     }
 }

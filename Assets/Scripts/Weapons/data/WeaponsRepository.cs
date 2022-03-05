@@ -21,7 +21,7 @@ namespace Weapons.data
         public List<Weapon> GetAvailableWeapons() => weaponEntitiesDao
             .GetWeaponEntities()
             .Select((entity, index) =>
-                ConvertToWeapon(entity, (long) index)
+                ConvertToWeapon(entity, index)
             ).ToList();
 
         private static Weapon ConvertToWeapon(WeaponEntity entity, long weaponId) => new(

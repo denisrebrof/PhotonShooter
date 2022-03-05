@@ -1,4 +1,6 @@
 ﻿using System;
+using UnityEngine;
+using Weapons.domain.model;
 using Weapons.domain.repositories;
 using Zenject;
 
@@ -9,12 +11,15 @@ namespace Weapons.domain
         [Inject] private ISelectedWeaponRepository selectedWeaponRepository;
         [Inject] private IWeaponsRepository weaponsRepository;
 
-        public void SelectWeapon(int number)
+        public SelectWeaponResult SelectWeapon(int number)
         {
             var weapons = weaponsRepository.GetAvailableWeapons();
-            if (weapons.Count == 0) return;
-            var weaponIndex = Math.Clamp(number - 1, 0, weapons.Count - 1);
-            selectedWeaponRepository.SetSelectedWeapon(weapons[weaponIndex].ID);
+            if (weapons.Count == 0) return SelectWeaponResult.Failure;
+            var selectionWeaponIndex = number - 1;
+            if (selectionWeaponIndex < 0 || selectionWeaponIndex >= weapons.Count) return SelectWeaponResult.Failure;
+            
+            selectedWeaponRepository.SetSelectedWeapon(weapons[selectionWeaponIndex].ID);
+            return SelectWeaponResult.Success;
         }
     }
 }

@@ -4,7 +4,7 @@ using UniRx;
 
 namespace Ammo.data
 {
-    public class LoadedAmmoInMemoryRepository: IAmmoRepository
+    public class AmmoInMemoryRepository: IAmmoRepository
     {
         private readonly BehaviorSubject<int> ammoSubject = new(0);
 

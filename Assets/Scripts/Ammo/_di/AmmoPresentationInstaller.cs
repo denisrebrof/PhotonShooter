@@ -12,6 +12,7 @@ namespace Ammo._di
         public override void InstallBindings()
         {
             Container.Bind<IReloadHandler>().FromInstance(animatorReloadHandler).AsSingle();
+            Container.Bind<AnimatorReloadHandler>().ToSelf().AsSingle();
             Container.Bind<ReloadingNavigator>().ToSelf().AsSingle();
 
             Container

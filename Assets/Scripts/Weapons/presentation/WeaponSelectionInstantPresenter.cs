@@ -30,7 +30,7 @@ namespace Weapons.presentation
         private void SpawnWeapon(GameObject weapon)
         {
             if (selectedWeapon != null) Destroy(selectedWeapon);
-            selectedWeapon = Instantiate(weapon, spawnRoot).gameObject;
+            if (spawnRoot != null) selectedWeapon = Instantiate(weapon, spawnRoot).gameObject;
         }
 
         private void OnDisable() => selectWeaponSubscription.Dispose();

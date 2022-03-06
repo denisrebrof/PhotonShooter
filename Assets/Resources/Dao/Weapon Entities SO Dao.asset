@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bdb164c67ed432196e2dae89c2afea6, type: 3}
+  m_Name: Weapon Entities SO Dao
+  m_EditorClassIdentifier: 
+  entities:
+  - Name: Rifle
+    AmmoCapacity: 5
+    Type: 1
+    preview: {fileID: 21300000, guid: 0c220fe1cabb7df4c9edcb277e5dbb0c, type: 3}
+    prefab: {fileID: 0}
+  - Name: Rifle 2
+    AmmoCapacity: 15
+    Type: 1
+    preview: {fileID: 21300000, guid: c6e83b049b379e945ab96dc10ba723ea, type: 3}
+    prefab: {fileID: 0}

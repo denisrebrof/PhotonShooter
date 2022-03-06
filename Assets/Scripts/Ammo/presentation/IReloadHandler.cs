@@ -10,7 +10,8 @@ namespace Ammo.presentation
         public enum ReloadingHandlerResult
         {
             Completed,
-            Aborted
+            Aborted,
+            InvalidState
         }
     }
 }

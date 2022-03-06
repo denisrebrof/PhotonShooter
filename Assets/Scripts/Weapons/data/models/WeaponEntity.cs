@@ -1,9 +1,11 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using Weapons.domain;
 using Weapons.domain.model;
 
 namespace Weapons.data.models
 {
+    [Serializable]
     public class WeaponEntity
     {
         public string Name;

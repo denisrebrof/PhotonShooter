@@ -14,8 +14,9 @@ namespace Weapons._di
 
         public override void InstallBindings()
         {
+            Debug.Log("WeaponsBaseInstaller");
             //Data
-            Container.Bind<WeaponEntitiesSODao>().FromInstance(weaponEntitiesSoDao).AsSingle();
+            Container.Bind<IWeaponEntitiesDao>().FromInstance(weaponEntitiesSoDao).AsSingle();
             Container.Bind<IWeaponsRepository>().To<WeaponsRepository>().AsSingle();
             Container.Bind<ISelectedWeaponRepository>().To<SelectedWeaponInMemoryRepository>().AsSingle();
             Container.Bind<IWeaponPreviewRepository>().To<WeaponPreviewRepository>().AsSingle();

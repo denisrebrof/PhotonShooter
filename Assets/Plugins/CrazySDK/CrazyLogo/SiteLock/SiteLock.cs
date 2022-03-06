@@ -32,7 +32,7 @@ public class SiteLock : MonoBehaviour
             //String is not a valid URL. 
 #if UNITY_EDITOR
             //print("URL Not Valid");
-            return;
+            return; 
 #else
                 Crash(0);
                 return;

@@ -1,24 +1,16 @@
 using Photon.Pun;
 using UnityEngine;
 
-public class SpawnPlayer : MonoBehaviour
+namespace Photon.Gameplay
 {
-    [Tooltip("The prefab to use for representing the player")]
-    public GameObject playerPrefab;
-
-    private void Start()
+    public class SpawnPlayer : MonoBehaviour
     {
-        if (playerPrefab == null)
+        public GameObject playerPrefab;
+
+        private void Start()
         {
-            Debug.LogError(
-                "<Color=Red><a>Missing</a></Color> playerPrefab Reference. Please set it up in GameObject 'Game Manager'",
-                this);
-        }
-        else
-        {
-            Debug.LogFormat("We are Instantiating LocalPlayer from {0}", Application.loadedLevelName);
-            // we're in a room. spawn a character for the local player. it gets synced by using PhotonNetwork.Instantiate
-            PhotonNetwork.Instantiate(this.playerPrefab.name, transform.position, transform.rotation);
+            var spawnTransform = transform;
+            PhotonNetwork.Instantiate(this.playerPrefab.name, spawnTransform.position, spawnTransform.rotation);
         }
     }
 }

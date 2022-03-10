@@ -8,29 +8,31 @@ namespace Weapons.presentation.ui
 {
     public class WeaponListItem : MonoBehaviour
     {
-        [Header("Timer")] 
-        [SerializeField] private float setStateTimer = 0.5f;
+        [Header("Timer")] [SerializeField] private float setStateTimer = 0.5f;
         [SerializeField] private AnimationCurve setStateEvaluateCurve = AnimationCurve.Linear(0, 0, 1, 1);
 
-        [Header("selectedIndicator")] 
-        [SerializeField] private GameObject selectedIndicator;
+        [Header("selectedIndicator")] [SerializeField]
+        private GameObject selectedIndicator;
 
-        [Header("Icon")] 
-        [SerializeField] private Image icon;
+        [Header("Icon")] [SerializeField] private Image icon;
         [SerializeField] private Color activeIconColor = Color.white;
         [SerializeField] private Color disabledIconColor = Color.gray;
 
-        [Header("Text")] 
-        [SerializeField] private Text weaponNameText;
+        [Header("Text")] [SerializeField] private Text weaponNameText;
         [SerializeField] private Color activeNameTextColor = Color.white;
         [SerializeField] private Color disabledNameTextColor = Color.gray;
 
         private bool selectedState = false;
 
-        public void Setup(Weapon weapon, Sprite preview)
+        public void Setup(Weapon weapon, Sprite preview, bool selected = false)
         {
+            StopAllCoroutines();
             weaponNameText.text = weapon.Name;
             icon.sprite = preview;
+            icon.color = selected ? activeIconColor : disabledIconColor;
+            weaponNameText.color = selected ? activeNameTextColor : disabledNameTextColor;
+            selectedIndicator.SetActive(selected);
+            selectedState = selected;
         }
 
         public void SetSelectedState(bool selected)

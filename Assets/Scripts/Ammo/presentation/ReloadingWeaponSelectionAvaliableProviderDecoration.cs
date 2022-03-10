@@ -8,9 +8,6 @@ namespace Ammo.presentation
     public class ReloadingWeaponSelectionAvailableProvider: IWeaponSelectionAvailableProvider
     {
         [Inject] private IAmmoStateRepository ammoStateRepository;
-        public bool IsSelectionAvailable()
-        {
-            return ammoStateRepository.GetAmmoState() == AmmoState.Reloading;
-        }
+        public bool IsSelectionAvailable() => ammoStateRepository.GetAmmoState() != AmmoState.Reloading;
     }
 }

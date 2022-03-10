@@ -8,17 +8,17 @@ using Zenject;
 
 namespace Weapons.presentation.ui
 {
-    public class WeaponList: MonoBehaviour
+    public class WeaponList : MonoBehaviour
     {
         [SerializeField] private Transform listRoot;
         [Inject] private WeaponListItem.Factory weaponItemFactory;
-        
+
         [Inject] private IWeaponsRepository weaponsRepository;
         [Inject] private ISelectedWeaponRepository selectedWeaponRepository;
         [Inject] private IWeaponPreviewRepository previewRepository;
 
         [CanBeNull] private WeaponListItem selectedItem;
-        
+
         private void Awake()
         {
             if (listRoot == null)
@@ -27,7 +27,7 @@ namespace Weapons.presentation.ui
             var items = weaponsRepository
                 .GetAvailableWeapons()
                 .ToDictionary(weapon => weapon.ID, CreateItem);
-                
+
             selectedWeaponRepository
                 .GetSelectedWeaponFlow()
                 .Select(selected => items[selected.ID])
@@ -37,7 +37,7 @@ namespace Weapons.presentation.ui
 
         private void SetSelected(WeaponListItem nextSelectedItem)
         {
-            if (selectedItem != null) selectedItem.SetSelectedState(false);
+            if (selectedItem != null && selectedItem != nextSelectedItem) selectedItem.SetSelectedState(false);
             nextSelectedItem.SetSelectedState(true);
             selectedItem = nextSelectedItem;
         }

@@ -5,6 +5,6 @@ namespace MatchState.domain
     public interface IMatchTimerRepository
     {
         public IObservable<int> GetMatchTimeSecondsFlow();
-        public void SetMatchTimeSeconds(int seconds);
+        public void StartTimer(int seconds);
     }
 }

@@ -11,13 +11,13 @@ namespace Photon
 
         public void HandleShoot(Vector3 source, Vector3 pos, HitEffectType type)
         {
-            photonView.RPC("HandleShoot", RpcTarget.All, source, pos, (int)type);
+            photonView.RPC(nameof(RPC_HandleShoot), RpcTarget.All, source, pos, (int) type);
         }
 
         [PunRPC]
-        private void HandleShoot(Vector3 source, Vector3 pos, int effectType)
+        private void RPC_HandleShoot(Vector3 source, Vector3 pos, int effectType)
         {
-            var type = (HitEffectType)effectType;
+            var type = (HitEffectType) effectType;
             var smokeVector = pos - source;
             if (smokeVector.magnitude > maxDist)
                 smokeVector = smokeVector.normalized * maxDist;

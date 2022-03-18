@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using UnityEngine.Events;
 
-namespace Shooting.presentation
+namespace Damage.presentation
 {
     public class ShootingProjectile : MonoBehaviour
     {

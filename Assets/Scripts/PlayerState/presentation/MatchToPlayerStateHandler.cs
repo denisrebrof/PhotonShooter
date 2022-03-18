@@ -21,11 +21,8 @@ namespace PlayerState.presentation
 
         private void HandleMatchState(MatchStates state)
         {
-            if (state == MatchStates.Finished)
-                playerStateRepository.SetPlayerState(PlayerStates.Idle);
-            
-            if (state == MatchStates.Playing)
-                playerStateRepository.SetPlayerState(PlayerStates.Spawning);
+            var playerState = state == MatchStates.Playing ? PlayerStates.Spawning : PlayerStates.Idle;
+            playerStateRepository.SetPlayerState(playerState);
         }
     }
 }

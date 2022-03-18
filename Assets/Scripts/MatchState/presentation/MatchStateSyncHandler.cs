@@ -8,7 +8,7 @@ using Zenject;
 
 namespace MatchState.presentation
 {
-    public class MatchStateHandler : MonoBehaviourPun
+    public class MatchStateSyncHandler : MonoBehaviourPun
     {
         [Inject] private IMatchStateRepository stateRepository;
         [Inject] private IMatchTimerRepository timerRepository;

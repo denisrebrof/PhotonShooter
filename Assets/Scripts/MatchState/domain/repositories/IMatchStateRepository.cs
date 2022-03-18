@@ -8,5 +8,6 @@ namespace MatchState.domain
     {
         public void SetMatchState(MatchStates state);
         public IObservable<MatchStates> GetMatchStateFlow();
+        MatchStates GetMatchState();
     }
 }

@@ -16,5 +16,6 @@ namespace MatchState.data
         }
 
         public IObservable<MatchStates> GetMatchStateFlow() => matchStateSubject;
+        public MatchStates GetMatchState() => matchStateSubject.Value;
     }
 }

@@ -1,39 +1,55 @@
 ﻿using ExitGames.Client.Photon;
+using MatchState.domain;
+using MatchState.domain.model;
 using Photon.Pun;
 using UnityEngine;
+using Zenject;
 
 namespace MatchState.presentation
 {
     public class MatchStateHandler : MonoBehaviourPun
     {
-        [SerializeField] double matchDurationTimer = 60;
-        [SerializeField] double matchRestartTimer = 10;
-        double startTime;
+        [Inject] private IMatchStateRepository stateRepository;
+        [Inject] private IMatchTimerRepository timerRepository;
+        [Inject] private MatchStateDurationUseCase stateDurationUseCase;
+        [Inject] private StartMatchStateUseCase startMatchStateUseCase;
+
+        [SerializeField] private MatchStates matchInitialState = MatchStates.Playing;
+
+        const string StartTimeKey = "StartTime";
+        const string StateKey = "StateKey";
 
         private void Start()
         {
             if (!PhotonNetwork.InRoom) return;
-            
-            if (!PhotonNetwork.IsMasterClient)
-            {
-                startTime = double.Parse(PhotonNetwork.CurrentRoom.CustomProperties["StartTime"].ToString());
-                return;
-            }
 
+            if (PhotonNetwork.IsMasterClient) InitializeMatchParams();
+            else TakeMatchParams();
+        }
+
+        private void InitializeMatchParams()
+        {
+            stateRepository.SetMatchState(MatchStates.Playing);
             var customValue = new Hashtable();
-            startTime = PhotonNetwork.Time;
-            customValue.Add("StartTime", startTime);
+            customValue.Add(StartTimeKey, PhotonNetwork.Time);
+            customValue.Add(StateKey, matchInitialState as int);
             PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
         }
 
-        void Update()
+        private void TakeMatchParams()
         {
-            timerIncrementValue = PhotonNetwork.Time - startTime;
-            if (timerIncrementValue >= matchDurationTimer)
-            {
-                //Timer Completed
-                //Do What Ever You What to Do Here
-            }
+            //Apply match state
+            var currentMatchState = (MatchStates)int.Parse(GetRoomCustomProperty(StateKey));
+            stateRepository.SetMatchState(currentMatchState);
+            //Apply timer
+            var startTime = double.Parse(GetRoomCustomProperty(StartTimeKey));
+            var timeLeft = PhotonNetwork.Time - startTime;
+            timerRepository.StartTimer((int)timeLeft);
         }
+
+        private static string GetRoomCustomProperty(string key) => PhotonNetwork
+            .CurrentRoom
+            .CustomProperties[key]
+            .ToString();
     }
 }

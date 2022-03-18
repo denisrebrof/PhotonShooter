@@ -6,5 +6,6 @@ namespace MatchState.domain
     {
         public IObservable<int> GetMatchTimeSecondsFlow();
         public void StartTimer(int seconds);
+        public void StopTimer();
     }
 }

@@ -4,13 +4,13 @@ using Zenject;
 
 namespace MatchState.domain
 {
-    public class SetMatchStateUseCase
+    public class StartMatchStateUseCase
     {
         [Inject] private MatchStateDurationUseCase matchStateDurationUseCase;
         [Inject] private IMatchStateRepository matchStateRepository;
         [Inject] private IMatchTimerRepository matchTimerRepository;
 
-        public void SetMatchState(MatchStates state)
+        public void StartMatchState(MatchStates state)
         {
             var currentState = matchStateRepository.GetMatchState();
             if(currentState == state) return;

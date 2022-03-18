@@ -17,7 +17,7 @@ namespace MatchState.domain
             
             matchStateRepository.SetMatchState(state);
             matchTimerRepository.StopTimer();
-            if (!matchStateDurationUseCase.GetStateDurationIfItHas(state, out var duration)) ;
+            if (!matchStateDurationUseCase.GetStateDurationIfItHas(state, out var duration)) return;
             matchTimerRepository.StartTimer(duration);
         }
     }

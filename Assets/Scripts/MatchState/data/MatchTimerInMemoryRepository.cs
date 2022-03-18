@@ -29,11 +29,9 @@ namespace MatchState.data
         public void StopTimer()
         {
             timerSubscription?.Dispose();
+            timerSubscription = null;
         }
 
-        ~MatchTimerInMemoryRepository()
-        {
-            timerSubscription?.Dispose();
-        }
+        ~MatchTimerInMemoryRepository() => StopTimer();
     }
 }

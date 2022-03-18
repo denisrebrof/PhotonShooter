@@ -25,12 +25,10 @@ namespace MatchState.presentation
             if (!PhotonNetwork.InRoom) return;
 
             if (!PhotonNetwork.IsMasterClient)
-            {
                 TakeMatchParams();
-                return;
-            }
+            else
+                InitializeMatchParams();
 
-            InitializeMatchParams();
             HandleStateTimer();
         }
 
@@ -58,6 +56,7 @@ namespace MatchState.presentation
 
         private void HandleStateTimer() => getMatchStateTimerUpdateRequestsFlowUseCase
             .GetMatchStateTimerUpdateRequestsFlow()
+            .Where(_ => PhotonNetwork.IsMasterClient)
             .Subscribe(nextState =>
                 photonView.RPC(nameof(RPC_ApplyMatchStateUpdate), RpcTarget.All, (int) nextState)
             ).AddTo(this);

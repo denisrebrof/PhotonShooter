@@ -1,11 +1,12 @@
 ﻿using System;
 using Health.domain;
+using Health.domain.repositories;
 using UniRx;
 using Zenject;
 
 namespace Health.data
 {
-    public class InMemoryHealthRepository: IHealthRepository
+    public class InMemoryHealthRepository: ICurrentPlayerHealthRepository
     {
          private readonly BehaviorSubject<int> healthSubject;
 

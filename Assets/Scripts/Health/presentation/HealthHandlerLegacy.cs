@@ -4,7 +4,7 @@ using UnityEngine.Events;
 
 namespace Health.presentation
 {
-    public class HealthHandler : MonoBehaviourPun
+    public class HealthHandlerLegacy : MonoBehaviourPun
     {
         [SerializeField]
         private int health = 100;

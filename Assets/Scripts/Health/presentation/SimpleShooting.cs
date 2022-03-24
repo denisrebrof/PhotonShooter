@@ -37,7 +37,7 @@ namespace Health.presentation
                 return;
             }
 
-            var health = hit.collider.gameObject.GetComponent<HealthHandler>();
+            var health = hit.collider.gameObject.GetComponent<HealthHandlerLegacy>();
             if (health != null) health.TakeDamage(10);
 
             shootEffect.HandleShoot(sourceTransform.position, hit.point, health != null ? Player : Ground);

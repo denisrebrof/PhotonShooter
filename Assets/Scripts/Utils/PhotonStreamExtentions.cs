@@ -41,10 +41,5 @@ namespace Utils
                 return false;
             }
         }
-
-        public static bool Sync<TK, TV>(this PhotonStream stream, IDictionary<TK, TV> dictionary)
-        {
-            
-        }
     }
 }

@@ -9,7 +9,7 @@ namespace Health.presentation
         void Start()
         {
             if(!photonView.IsMine) return;
-            GetComponent<HealthHandler>().healthChanged.AddListener(HandleHealth);
+            GetComponent<HealthHandlerLegacy>().healthChanged.AddListener(HandleHealth);
         }
 
         private void HandleHealth(int health)
@@ -17,7 +17,7 @@ namespace Health.presentation
             if(health>0)
                 return;
 
-            GetComponent<HealthHandler>().Reset();
+            GetComponent<HealthHandlerLegacy>().Reset();
             photonView.transform.position = GameObject.Find("Respawn").transform.position;
         }
     }

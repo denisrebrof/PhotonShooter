@@ -24,23 +24,23 @@ namespace MatchState.presentation
         {
             if (!PhotonNetwork.InRoom) return;
 
-            if (!PhotonNetwork.IsMasterClient)
-                TakeMatchParams();
-            else
+            if (PhotonNetwork.IsMasterClient)
                 InitializeMatchParams();
+            else
+                TakeMatchParams();
 
-            HandleStateTimer();
+            HandleMatchStateUpdates();
         }
 
         private void InitializeMatchParams()
         {
-            stateRepository.SetMatchState(MatchStates.Playing);
             var customValue = new Hashtable
             {
-                {StartTimeKey, PhotonNetwork.Time},
-                {StateKey, (int) matchInitialState}
+                { StartTimeKey, PhotonNetwork.Time },
+                { StateKey, (int)matchInitialState }
             };
             PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
+            startMatchStateUseCase.StartMatchState(matchInitialState);
         }
 
         private void TakeMatchParams()
@@ -54,7 +54,7 @@ namespace MatchState.presentation
             timerRepository.StartTimer((int) timeLeft);
         }
 
-        private void HandleStateTimer() => getMatchStateTimerUpdateRequestsFlowUseCase
+        private void HandleMatchStateUpdates() => getMatchStateTimerUpdateRequestsFlowUseCase
             .GetMatchStateTimerUpdateRequestsFlow()
             .Where(_ => PhotonNetwork.IsMasterClient)
             .Subscribe(nextState =>

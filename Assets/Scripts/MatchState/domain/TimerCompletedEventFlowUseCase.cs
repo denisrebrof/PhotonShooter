@@ -1,5 +1,7 @@
 ﻿using System;
 using UniRx;
+using UnityEngine;
+using Utils;
 using Zenject;
 
 namespace MatchState.domain
@@ -10,8 +12,8 @@ namespace MatchState.domain
 
         public IObservable<Unit> GetTimerCompletedEventFlow() => matchTimerRepository
             .GetMatchTimeSecondsFlow()
-            .Scan((prev, next) => (prev > 0 && next <= 0) ? 1 : 0)
-            .Where(res => res == 1)
+            .CombineWithPrevious((prev, next) => prev > 0 && next <= 0)
+            .Where(res => res)
             .AsUnitObservable();
     }
 }

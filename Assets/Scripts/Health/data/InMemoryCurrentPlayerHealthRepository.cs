@@ -6,12 +6,12 @@ using Zenject;
 
 namespace Health.data
 {
-    public class InMemoryHealthRepository: ICurrentPlayerHealthRepository
+    public class InMemoryCurrentPlayerHealthRepository: ICurrentPlayerHealthRepository
     {
          private readonly BehaviorSubject<int> healthSubject;
 
         [Inject]
-        public InMemoryHealthRepository(IMaxHealthRepository maxHealthRepository)
+        public InMemoryCurrentPlayerHealthRepository(IMaxHealthRepository maxHealthRepository)
         {
             var maxHealth = maxHealthRepository.GetMaxHealth();
             healthSubject = new BehaviorSubject<int>(maxHealth);

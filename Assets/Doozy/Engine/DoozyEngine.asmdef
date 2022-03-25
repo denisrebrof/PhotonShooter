@@ -1,0 +1,16 @@
+{
+    "name": "DoozyEngine",
+    "rootNamespace": "",
+    "references": [
+        "GUID:326d76a684af13842b11144916828846"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

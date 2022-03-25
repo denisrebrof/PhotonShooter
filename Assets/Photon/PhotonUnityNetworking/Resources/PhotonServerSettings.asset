@@ -42,6 +42,8 @@ MonoBehaviour:
   - RPC_TakeDamage
   - RPC_ShootEffect
   - HandleShoot
+  - RPC_HandleShoot
+  - RPC_ApplyMatchStateUpdate
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

@@ -1,6 +1,7 @@
 ﻿using Health.data;
 using Health.domain;
 using Health.domain.repositories;
+using Health.presentation.HealthHandler;
 using UnityEngine;
 using Zenject;
 
@@ -13,7 +14,10 @@ namespace Health._di
         {
             //Data
             Container.Bind<IMaxHealthRepository>().To<DefaultOneHundredMaxHealthRepository>().AsSingle();
-            Container.Bind<ICurrentPlayerHealthRepository>().To<InMemoryHealthRepository>().AsSingle();
+            Container.Bind<ICurrentPlayerHealthRepository>().To<InMemoryCurrentPlayerHealthRepository>().AsSingle();
+            Container.Bind<IHealthHandlersRepository>().To<HealthHandlersImMemoryRepository>().AsSingle();
+            //Presentation
+            Container.Bind<HealthHandlerSyncBase.IHealthHandlerSyncAdapter>().To<PlayerHealthHandlerSyncAdapter>().AsSingle();
         }
     }
 }

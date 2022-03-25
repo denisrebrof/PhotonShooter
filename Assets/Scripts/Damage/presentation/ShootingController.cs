@@ -1,12 +1,12 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Pool;
 
 namespace Damage.presentation
 {
     public class ShootingController : MonoBehaviour
     {
-        
-        
+
         private ObjectPool<GameObject> pool = new(
             createFunc: () => new GameObject("PooledObject"),
             actionOnGet: (obj) => obj.SetActive(true),

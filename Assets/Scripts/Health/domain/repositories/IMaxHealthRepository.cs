@@ -1,4 +1,4 @@
-﻿namespace Health.domain
+﻿namespace Health.domain.repositories
 {
     public interface IMaxHealthRepository
     {

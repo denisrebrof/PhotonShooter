@@ -1,9 +1,8 @@
 ﻿using System;
-using Health.domain.model;
 
-namespace Health.domain
+namespace Health.domain.repositories
 {
-    public interface IHealthRepository
+    public interface ICurrentPlayerHealthRepository
     {
         public void SetHealth(int health);
         public int GetHealth();

@@ -12,18 +12,18 @@ namespace MatchState.domain
 
         public IObservable<TimerState> GetTimerStateFlow(MatchStates state)
         {
-            var timerSecondsFlow = matchTimerRepository.GetMatchTimeSecondsFlow();
-            return matchStateRepository
+            var correctMatchStateFlow = matchStateRepository
                 .GetMatchStateFlow()
-                .Select(currentState => currentState == state)
-                .WithLatestFrom(timerSecondsFlow, CreateTimerState)
+                .Select(currentState => currentState == state);
+            return matchTimerRepository.GetMatchTimeSecondsFlow()
+                .WithLatestFrom(correctMatchStateFlow, CreateTimerState)
                 .DistinctUntilChanged();
         }
 
-        private static TimerState CreateTimerState(bool isCorrectState, int timeLeft)
+        private static TimerState CreateTimerState(int timeLeft, bool isCorrectState)
         {
             var time = isCorrectState ? timeLeft : 0;
-            return new TimerState(false, time);
+            return new TimerState(isCorrectState, time);
         }
 
         public struct TimerState

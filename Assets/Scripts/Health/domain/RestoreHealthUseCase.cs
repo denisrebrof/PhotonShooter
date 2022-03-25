@@ -1,16 +1,17 @@
-﻿using Zenject;
+﻿using Health.domain.repositories;
+using Zenject;
 
 namespace Health.domain
 {
     public class RestoreHealthUseCase
     {
-        [Inject] private IHealthRepository healthRepository;
+        [Inject] private ICurrentPlayerHealthRepository currentPlayerHealthRepository;
         [Inject] private IMaxHealthRepository maxHealthRepository;
 
         public void RestoreHealth()
         {
             var maxHealth = maxHealthRepository.GetMaxHealth();
-            healthRepository.SetHealth(maxHealth);
+            currentPlayerHealthRepository.SetHealth(maxHealth);
         }
     }
 }

@@ -1,16 +1,15 @@
 ﻿using System;
-using JetBrains.Annotations;
 using UniRx;
 using UnityEngine;
-using static Ammo.presentation.IReloadHandler;
+using static Ammo.presentation.handler.IReloadHandler;
 
-namespace Ammo.presentation
+namespace Ammo.presentation.handler
 {
-    public class AnimatorReloadHandler: IReloadHandler
+    public class AnimatorReloadHandler: MonoBehaviour, IReloadHandler
     {
-        [CanBeNull] private Animator animator;
-        private string startTrigger;
-        private string abortTrigger;
+        [SerializeField] private Animator animator;
+        [SerializeField] private string startTrigger = "start_reloading";
+        [SerializeField] private string abortTrigger = "abort_reloading";
 
         private readonly Subject<ReloadingHandlerResult> handlerResultSubject = new();
 
@@ -29,15 +28,5 @@ namespace Ammo.presentation
         }
 
         public void AnimationCompleteReloading() => handlerResultSubject.OnNext(ReloadingHandlerResult.Completed);
-
-        public void SetAnimator(Animator newAnimator, string sTrigger, string eTrigger)
-        {
-            if (animator != null)
-                handlerResultSubject.OnNext(ReloadingHandlerResult.Aborted);
-            
-            animator = newAnimator;
-            startTrigger = sTrigger;
-            abortTrigger = eTrigger;
-        }
     }
 }

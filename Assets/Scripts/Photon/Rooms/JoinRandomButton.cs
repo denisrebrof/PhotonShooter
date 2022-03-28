@@ -1,5 +1,6 @@
 using System;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -41,7 +42,12 @@ namespace Photon.Room
         private void Click()
         {
             if(!connected) return;
-            PhotonNetwork.JoinRandomOrCreateRoom();
+            PhotonNetwork.JoinRandomOrCreateRoom(
+                roomOptions: new RoomOptions()
+                {
+                    PublishUserId = true
+                }
+                );
         }
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine.UI;
 using Weapons.domain.repositories;
 using Zenject;
 
-namespace Ammo.presentation
+namespace Ammo.presentation.ui
 {
     public class AmmoView : MonoBehaviour
     {

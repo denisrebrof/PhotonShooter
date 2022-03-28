@@ -1,4 +1,5 @@
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +12,10 @@ namespace Photon.Room
 
         private static void CreateRoom()
         {
-            PhotonNetwork.CreateRoom("def");
+            PhotonNetwork.CreateRoom("def", new RoomOptions()
+            {
+                PublishUserId = true
+            });
         }
     }
 }

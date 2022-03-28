@@ -1,16 +1,69 @@
+using ExitGames.Client.Photon;
 using Photon.Pun;
+using Photon.Realtime;
 using UnityEngine;
 
 namespace Photon.Gameplay
 {
-    public class SpawnPlayer : MonoBehaviour
+    public class SpawnPlayer : MonoBehaviour, IOnEventCallback
     {
-        public GameObject playerPrefab;
+        public GameObject playerSourcePrefab;
+        public GameObject playerViewPrefab;
 
         private void Start()
         {
+            SpawnPlayerPrefab();
+        }
+
+        private void SpawnPlayerLegacy()
+        {
             var spawnTransform = transform;
-            PhotonNetwork.Instantiate(this.playerPrefab.name, spawnTransform.position, spawnTransform.rotation);
+            PhotonNetwork.Instantiate(playerSourcePrefab.name, spawnTransform.position, spawnTransform.rotation);
+        }
+
+        public void SpawnPlayerPrefab()
+        {
+            var spawnTransform = transform;
+            var player = Instantiate(playerSourcePrefab, spawnTransform.position, spawnTransform.rotation);
+            var photonView = player.GetComponent<PhotonView>();
+
+            if (!PhotonNetwork.AllocateViewID(photonView))
+            {
+                Debug.LogError("Failed to allocate a ViewId.");
+                Destroy(player);
+            }
+
+            var data = new object[]
+            {
+                player.transform.position,
+                player.transform.rotation,
+                photonView.ViewID
+            };
+
+            var raiseEventOptions = new RaiseEventOptions
+            {
+                Receivers = ReceiverGroup.Others,
+                CachingOption = EventCaching.AddToRoomCache
+            };
+
+            var sendOptions = new SendOptions { Reliability = true };
+            PhotonNetwork.RaiseEvent(CustomManualInstantiationEventCode, data, raiseEventOptions, sendOptions);
+        }
+
+        private byte CustomManualInstantiationEventCode = 7;
+        
+        private void OnEnable() => PhotonNetwork.AddCallbackTarget(this);
+
+        private void OnDisable() => PhotonNetwork.RemoveCallbackTarget(this);
+
+        public void OnEvent(EventData photonEvent)
+        {
+            if (photonEvent.Code != CustomManualInstantiationEventCode) return;
+
+            var data = (object[])photonEvent.CustomData;
+            var player = Instantiate(playerViewPrefab, (Vector3)data[0], (Quaternion)data[1]);
+            var photonView = player.GetComponent<PhotonView>();
+            photonView.ViewID = (int)data[2];
         }
     }
 }

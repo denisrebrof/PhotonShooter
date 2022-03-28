@@ -1,9 +1,9 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Ammo.presentation
+namespace Ammo.presentation.handler
 {
-    public class ReloadPresenterSetup : MonoBehaviour
+    public class ReloadHandlerSetup : MonoBehaviour
     {
         [Inject] private ReloadingNavigator navigator;
         private IReloadHandler handler;
@@ -12,9 +12,9 @@ namespace Ammo.presentation
         private void OnEnable()
         {
             if (handler == null)
-                Debug.LogError("Reload presenter setup failed - presenter not found!");
+                Debug.LogError("Reload handler setup failed - handler not found!");
 
-            navigator.SetReloadPresenter(handler);
+            navigator.SetReloadHandler(handler);
         }
     }
 }

@@ -2,7 +2,7 @@
 using Photon.Pun;
 using UnityEngine;
 
-public class FirstPersonMovement : MonoBehaviourPun
+public class FirstPersonMovement : MonoBehaviour
 {
     public float speed = 5;
     Vector2 velocity;
@@ -15,16 +15,11 @@ public class FirstPersonMovement : MonoBehaviourPun
     /// <summary> Functions to override movement speed. Will use the last added override. </summary>
     public List<System.Func<float>> speedOverrides = new();
     
-    [SerializeField]
-
-    void FixedUpdate()
+    private void FixedUpdate()
     {
-        if(!photonView.IsMine || !PhotonNetwork.IsConnected)
-            return;
-        
         // Move.
         IsRunning = canRun && Input.GetKey(runningKey);
-        float movingSpeed = IsRunning ? runSpeed : speed;
+        var movingSpeed = IsRunning ? runSpeed : speed;
         if (speedOverrides.Count > 0)
             movingSpeed = speedOverrides[speedOverrides.Count - 1]();
         velocity.y = Input.GetAxis("Vertical") * movingSpeed * Time.deltaTime;

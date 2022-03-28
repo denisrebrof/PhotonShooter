@@ -17,7 +17,7 @@ namespace Health._di
             Container.Bind<ICurrentPlayerHealthRepository>().To<InMemoryCurrentPlayerHealthRepository>().AsSingle();
             Container.Bind<IHealthHandlersRepository>().To<HealthHandlersImMemoryRepository>().AsSingle();
             //Presentation
-            Container.Bind<HealthHandlerSyncBase.IHealthHandlerSyncAdapter>().To<PlayerHealthHandlerSyncAdapter>().AsSingle();
+            Container.Bind<PlayerHealthHandlerSyncAdapter>().ToSelf().AsSingle();
         }
     }
 }

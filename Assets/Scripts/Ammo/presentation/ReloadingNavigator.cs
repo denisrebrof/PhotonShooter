@@ -1,6 +1,7 @@
 ﻿using System;
 using Ammo.domain;
 using Ammo.domain.model;
+using Ammo.presentation.handler;
 using JetBrains.Annotations;
 using UniRx;
 using UnityEngine;
@@ -48,7 +49,7 @@ namespace Ammo.presentation
             return reloadingResult;
         }
 
-        public void SetReloadPresenter(IReloadHandler handler)
+        public void SetReloadHandler(IReloadHandler handler)
         {
             reloadHandler?.AbortReloading();
             reloadHandler = handler;

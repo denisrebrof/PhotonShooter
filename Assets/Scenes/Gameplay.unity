@@ -1186,6 +1186,37 @@ MonoBehaviour:
   ammoText: {fileID: 269826140}
   reloadingIndicator: {fileID: 574032449}
   reloadRequiredIndicator: {fileID: 1865257483}
+--- !u!1 &744090235
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 744090236}
+  m_Layer: 0
+  m_Name: CamRoot
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &744090236
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 744090235}
+  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: 0, y: 90, z: -4.8}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
+  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &928437604
 GameObject:
   m_ObjectHideFlags: 0
@@ -1342,14 +1373,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 963194225}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 90, z: -4.8}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.488, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1335599643
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1846,7 +1877,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2be349b9a63b19444ae55fc7c504af31, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPrefab: {fileID: 4443890654770130604, guid: d6e1c5b60fdd05c4eb0e68cc7aa9164c, type: 3}
+  playerSourcePrefab: {fileID: 9039984566256761172, guid: 3125c10ae7c69be44890341933535660, type: 3}
+  playerViewPrefab: {fileID: 311108144046275481, guid: 8f9eb4e96b93abb47a4edd190398a7b2, type: 3}
 --- !u!1001 &5876902557230635066
 PrefabInstance:
   m_ObjectHideFlags: 0

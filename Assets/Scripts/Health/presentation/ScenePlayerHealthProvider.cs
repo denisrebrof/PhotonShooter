@@ -15,9 +15,11 @@ namespace Health.presentation
 
         private void Start()
         {
-            if (this.GetPlayerId(out var userId))
+            Debug.Log("HealthProvider: try");
+            if (!this.GetPlayerId(out var userId))
                 return;
             
+            Debug.Log("HealthProvider: " + userId);
             healthHandlersRepository
                 .GetHealthFlow(userId)
                 .Subscribe(onHealthChanged.Invoke)

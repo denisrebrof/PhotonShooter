@@ -1,10 +1,9 @@
-﻿using System;
-using MatchState.domain;
+﻿using MatchState.domain;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace MatchState.presentation
+namespace MatchState.presentation.DebugComponents
 {
     public class MatchStateDebug: MonoBehaviour
     {

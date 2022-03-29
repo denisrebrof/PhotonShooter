@@ -1,22 +1,24 @@
-using System;
 using Health.domain.repositories;
 using UnityEngine;
 using Zenject;
 
-public class ScenePlayerHealthPresenter : MonoBehaviour
+namespace Health.presentation
 {
-    [Inject] private IMaxHealthRepository maxHealthRepository;
-    [SerializeField] private Transform target;
-
-    public void SetHealth(int health)
+    public class ScenePlayerHealthPresenter : MonoBehaviour
     {
-        var max = maxHealthRepository.GetMaxHealth();
-        ApplyHealth(health, max);
-    }
+        [Inject] private IMaxHealthRepository maxHealthRepository;
+        [SerializeField] private Transform target;
 
-    private void ApplyHealth(int health, int maxHealth)
-    {
-        var relative = ((float)health) / maxHealth;
-        target.localScale = new Vector3(relative, 1, 1);
+        public void SetHealth(int health)
+        {
+            var max = maxHealthRepository.GetMaxHealth();
+            ApplyHealth(health, max);
+        }
+
+        private void ApplyHealth(int health, int maxHealth)
+        {
+            var relative = ((float)health) / maxHealth;
+            target.localScale = new Vector3(relative, 1, 1);
+        }
     }
 }

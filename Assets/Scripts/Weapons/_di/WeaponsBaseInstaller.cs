@@ -23,6 +23,7 @@ namespace Weapons._di
             //Domain
             Container.Bind<ScrollWeaponsUseCase>().ToSelf().AsSingle();
             Container.Bind<SelectWeaponUseCase>().ToSelf().AsSingle();
+            Container.Bind<DefaultWeaponUseCase>().ToSelf().AsSingle();
         }
     }
 }

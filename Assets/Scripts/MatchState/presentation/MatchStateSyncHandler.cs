@@ -17,7 +17,7 @@ namespace MatchState.presentation
 
         [SerializeField] private MatchStates matchInitialState = MatchStates.Playing;
 
-        private const string StartTimeKey = "StartTime";
+        private const string StartStateTimeKey = "StartTime";
         private const string StateKey = "StateKey";
 
         private void Start()
@@ -34,12 +34,7 @@ namespace MatchState.presentation
 
         private void InitializeMatchParams()
         {
-            var customValue = new Hashtable
-            {
-                { StartTimeKey, PhotonNetwork.Time },
-                { StateKey, (int)matchInitialState }
-            };
-            PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
+            SetCurrentStateMatchParams(matchInitialState);
             startMatchStateUseCase.StartMatchState(matchInitialState);
         }
 
@@ -49,17 +44,32 @@ namespace MatchState.presentation
             var currentMatchState = (MatchStates) int.Parse(GetRoomCustomProperty(StateKey));
             stateRepository.SetMatchState(currentMatchState);
             //Apply timer
-            var startTime = double.Parse(GetRoomCustomProperty(StartTimeKey));
+            var startTime = double.Parse(GetRoomCustomProperty(StartStateTimeKey));
             var timeLeft = PhotonNetwork.Time - startTime;
             timerRepository.StartTimer((int) timeLeft);
+        }
+
+        private static void SetCurrentStateMatchParams(MatchStates state)
+        {
+            var customValue = new Hashtable
+            {
+                { StartStateTimeKey, PhotonNetwork.Time },
+                { StateKey, (int)state }
+            };
+            PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
         }
 
         private void HandleMatchStateUpdates() => getMatchStateTimerUpdateRequestsFlowUseCase
             .GetMatchStateTimerUpdateRequestsFlow()
             .Where(_ => PhotonNetwork.IsMasterClient)
-            .Subscribe(nextState =>
-                photonView.RPC(nameof(RPC_ApplyMatchStateUpdate), RpcTarget.All, (int) nextState)
-            ).AddTo(this);
+            .Do(SetCurrentStateMatchParams)
+            .Subscribe(ApplyMatchStateUpdate)
+            .AddTo(this);
+
+        private void ApplyMatchStateUpdate(MatchStates state)
+        {
+            photonView.RPC(nameof(RPC_ApplyMatchStateUpdate), RpcTarget.All, (int)state);
+        }
 
         [PunRPC]
         public void RPC_ApplyMatchStateUpdate(int nextState)

@@ -44,6 +44,7 @@ MonoBehaviour:
   - HandleShoot
   - RPC_HandleShoot
   - RPC_ApplyMatchStateUpdate
+  - RPC_InvokeShoot
   DisableAutoOpenWizard: 1
   ShowSettings: 1
   DevRegionSetOnce: 1

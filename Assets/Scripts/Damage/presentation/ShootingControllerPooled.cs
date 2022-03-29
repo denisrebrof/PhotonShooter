@@ -4,7 +4,7 @@ using UnityEngine.Pool;
 
 namespace Damage.presentation
 {
-    public class ShootingController : MonoBehaviour
+    public class ShootingControllerPooled : MonoBehaviour
     {
 
         private ObjectPool<GameObject> pool = new(

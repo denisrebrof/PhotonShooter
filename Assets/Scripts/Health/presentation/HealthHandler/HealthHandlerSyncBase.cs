@@ -8,17 +8,9 @@ namespace Health.presentation.HealthHandler
 {
     public abstract class HealthHandlerSyncBase : MonoBehaviourPun, IPunObservable
     {
-        [CanBeNull] private IHealthHandlerSyncAdapter handlerSyncAdapter;
         [Inject] private IHealthHandlersRepository healthHandlersRepository;
         protected abstract string HandlerId { get; }
-
-        private void Awake()
-        {
-            if (!SetupAdapter(out handlerSyncAdapter)) 
-                Debug.LogError("HealthHandler adapter not found!");
-        }
-
-        protected virtual bool SetupAdapter(out IHealthHandlerSyncAdapter syncAdapter) => TryGetComponent(out syncAdapter);
+        protected abstract int CurrentHealth { get; }
 
         public void OnPhotonSerializeView(PhotonStream stream, PhotonMessageInfo info)
         {
@@ -28,22 +20,14 @@ namespace Health.presentation.HealthHandler
 
         private void SendHealth(PhotonStream stream)
         {
-            if (handlerSyncAdapter != null)
-                stream.SendNext(handlerSyncAdapter.CurrentHealth);
-            else
-                Debug.LogError("HealthHandler needs adapter to sync data!");
+            stream.SendNext(CurrentHealth);
         }
 
         private void ReceiveHealth(PhotonStream stream)
         {
             var health = (int) stream.ReceiveNext();
             healthHandlersRepository.SetHealth(HandlerId, health);
-        }
-
-        public interface IHealthHandlerSyncAdapter
-        {
-            int InitialHealth { get; }
-            int CurrentHealth { get; }
+            Debug.Log("Receive Health: " + health + " HandlerId: " + HandlerId);
         }
     }
 }

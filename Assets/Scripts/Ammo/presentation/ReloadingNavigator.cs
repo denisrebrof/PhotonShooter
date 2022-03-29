@@ -26,7 +26,17 @@ namespace Ammo.presentation
             var ammoAvailableState = ammoAvailableStateUseCase.GetAmmoAvailableState();
             if (!reloadableAmmoState || !ammoAvailableState) return Observable.Return(ReloadingResult.WrongState);
 
-            return reloadHandler.StartReloading().Select(GetReloadingResult);
+            ammoStateRepository.SetAmmoState(AmmoState.Reloading);
+            return reloadHandler
+                .StartReloading()
+                .Select(GetReloadingResult)
+                .Do(ApplyReloadingResult);
+        }
+
+        public void SetReloadHandler(IReloadHandler handler)
+        {
+            reloadHandler?.AbortReloading();
+            reloadHandler = handler;
         }
 
         private static ReloadingResult GetReloadingResult(IReloadHandler.ReloadingHandlerResult handlerResult)
@@ -49,10 +59,10 @@ namespace Ammo.presentation
             return reloadingResult;
         }
 
-        public void SetReloadHandler(IReloadHandler handler)
+        private void ApplyReloadingResult(ReloadingResult result)
         {
-            reloadHandler?.AbortReloading();
-            reloadHandler = handler;
+            if(result!=ReloadingResult.Success) return;
+            reloadAmmoUseCase.ReloadAmmo();
         }
 
         public enum ReloadingResult

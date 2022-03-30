@@ -10,6 +10,7 @@ namespace Weapons.data.models
     {
         public string Name;
         public int AmmoCapacity;
+        public int PerMinuteRate;
         public Weapon.DamageType Type;
         public Sprite preview;
         public GameObject prefab;

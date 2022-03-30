@@ -10,7 +10,7 @@ namespace Shooting.data
         private Subject<Shoot> shootsSubject = new();
 
         public IObservable<Shoot> GetShotsFlow(string sourceID) => shootsSubject
-            .Where(shoot => shoot.PlayerID == sourceID);
+            .Where(shoot => shoot.ShooterID == sourceID);
 
         public void AddShoot(Shoot shoot) => shootsSubject.OnNext(shoot);
     }

@@ -9,11 +9,11 @@ namespace Shooting.domain
         [Inject] private IShootingRepository repository;
         [Inject] private PassAmmoUseCase passAmmoUseCase;
 
-        public bool Shoot(string playerID)
+        public bool Shoot(string shooterID)
         {
             var passResult = passAmmoUseCase.Pass(1);
             if (passResult != PassAmmoUseCase.PassAmmoResult.Success) return false;
-            repository.AddShoot(new Shoot(playerID));
+            repository.AddShoot(new Shoot(shooterID));
             return true;
         }
     }

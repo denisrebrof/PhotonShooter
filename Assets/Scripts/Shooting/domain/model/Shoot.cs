@@ -2,11 +2,11 @@
 {
     public struct Shoot
     {
-        public string PlayerID;
+        public string ShooterID;
 
-        public Shoot(string playerID)
+        public Shoot(string shooterID)
         {
-            PlayerID = playerID;
+            ShooterID = shooterID;
         }
     }
 }

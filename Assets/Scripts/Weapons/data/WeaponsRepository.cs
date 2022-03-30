@@ -28,6 +28,7 @@ namespace Weapons.data
             weaponId,
             entity.Name,
             entity.AmmoCapacity,
+            entity.PerMinuteRate,
             entity.Type
         );
     }

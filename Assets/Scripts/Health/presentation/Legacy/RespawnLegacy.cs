@@ -1,9 +1,9 @@
 using Photon.Pun;
 using UnityEngine;
 
-namespace Health.presentation
+namespace Health.presentation.Legacy
 {
-    public class Respawn : MonoBehaviourPun
+    public class RespawnLegacy : MonoBehaviourPun
     {
         // Start is called before the first frame update
         void Start()

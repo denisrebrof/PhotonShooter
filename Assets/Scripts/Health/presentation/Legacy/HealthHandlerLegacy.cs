@@ -2,7 +2,7 @@ using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
 
-namespace Health.presentation
+namespace Health.presentation.Legacy
 {
     public class HealthHandlerLegacy : MonoBehaviourPun
     {

@@ -2,9 +2,9 @@
 using Photon.Pun;
 using UnityEngine;
 
-namespace Health.presentation
+namespace Health.presentation.Legacy
 {
-    public class HealthUI : MonoBehaviourPun
+    public class HealthUILegacy : MonoBehaviourPun
     {
         private Transform lookAt;
         [SerializeField] private int maxHealth = 100;

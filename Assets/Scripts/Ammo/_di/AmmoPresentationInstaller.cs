@@ -1,5 +1,5 @@
 ﻿using Ammo.presentation;
-using Ammo.presentation.handler;
+using Ammo.presentation.navigator;
 using UnityEngine;
 using Weapons.presentation;
 using Zenject;
@@ -10,11 +10,11 @@ namespace Ammo._di
     {
         public override void InstallBindings()
         {
-            Container.Bind<ReloadingNavigator>().ToSelf().AsSingle();
+            Container.Bind<ReloadNavigator>().ToSelf().AsSingle();
 
             Container
                 .Bind<WeaponSelectionController.IWeaponSelectionAvailableProvider>()
-                .To<ReloadingWeaponSelectionAvailableProvider>().AsSingle();
+                .To<ReloadWeaponSelectionAvailableProvider>().AsSingle();
         }
     }
 }

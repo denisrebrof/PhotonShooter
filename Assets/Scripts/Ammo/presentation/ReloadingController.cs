@@ -1,4 +1,5 @@
 ﻿using System;
+using Ammo.presentation.navigator;
 using UniRx;
 using UnityEngine;
 using Weapons.presentation.utils;
@@ -8,7 +9,7 @@ namespace Ammo.presentation
 {
     public class ReloadingController: MonoBehaviour
     {
-        [Inject] private ReloadingNavigator navigator;
+        [Inject] private ReloadNavigator navigator;
 
         private void Start() => Observable.EveryUpdate().Subscribe(_ => HandleReloadInput()).AddTo(this);
         

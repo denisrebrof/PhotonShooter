@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ammo.presentation.handler
+namespace Ammo.presentation.navigator
 {
     public interface IReloadHandler
     {

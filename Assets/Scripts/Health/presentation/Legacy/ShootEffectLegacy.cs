@@ -1,9 +1,9 @@
 using Photon.Pun;
 using UnityEngine;
 
-namespace Photon
+namespace Health.presentation.Legacy
 {
-    public class ShootEffect : MonoBehaviourPun
+    public class ShootEffectLegacy : MonoBehaviourPun
     {
         [SerializeField] private float maxDist = 10f;
         [SerializeField] private GameObject hitGround;

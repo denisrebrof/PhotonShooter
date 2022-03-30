@@ -1,6 +1,6 @@
 ﻿namespace Shooting.presentation.SyncHandler
 {
-    public class PlayerShootingHandlerSync: ShootingHandlerSyncBase
+    public class PlayerShootingSyncHandler: ShootingSyncHandler
     {
         protected override string HandlerId => photonView.Controller.UserId;
     }

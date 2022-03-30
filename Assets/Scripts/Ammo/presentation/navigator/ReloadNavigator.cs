@@ -1,15 +1,14 @@
 ﻿using System;
 using Ammo.domain;
 using Ammo.domain.model;
-using Ammo.presentation.handler;
 using JetBrains.Annotations;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace Ammo.presentation
+namespace Ammo.presentation.navigator
 {
-    public class ReloadingNavigator
+    public class ReloadNavigator
     {
         [Inject] private ReloadAmmoUseCase reloadAmmoUseCase;
         [Inject] private IAmmoStateRepository ammoStateRepository;

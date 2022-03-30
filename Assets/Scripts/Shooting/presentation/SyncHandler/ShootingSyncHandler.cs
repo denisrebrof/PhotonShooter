@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Shooting.presentation.SyncHandler
 {
-    public abstract class ShootingHandlerSyncBase : MonoBehaviourPun
+    public abstract class ShootingSyncHandler : MonoBehaviourPun
     {
         [Inject] private IShootingRepository shootingRepository;
         protected abstract string HandlerId { get; }

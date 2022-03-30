@@ -1,16 +1,15 @@
-﻿using Photon;
-using Photon.Pun;
+﻿using Photon.Pun;
 using UnityEngine;
 using UnityEngine.Events;
-using static Photon.ShootEffect.HitEffectType;
+using static Health.presentation.Legacy.ShootEffectLegacy.HitEffectType;
 
-namespace Health.presentation
+namespace Health.presentation.Legacy
 {
-    public class SimpleShooting : MonoBehaviourPun
+    public class SimpleShootingLegacy : MonoBehaviourPun
     {
         private Camera cam;
         [SerializeField] private ParticleSystem shootPart;
-        [SerializeField] private ShootEffect shootEffect;
+        [SerializeField] private ShootEffectLegacy shootEffectLegacy;
         public UnityEvent onShoot;
 
         private void Start()
@@ -33,14 +32,14 @@ namespace Health.presentation
             if (!Physics.Raycast(ray, out RaycastHit hit))
             {
                 var position = sourceTransform.position;
-                shootEffect.HandleShoot(position, position + cam.transform.forward * 10f, None);
+                shootEffectLegacy.HandleShoot(position, position + cam.transform.forward * 10f, None);
                 return;
             }
 
             var health = hit.collider.gameObject.GetComponent<HealthHandlerLegacy>();
             if (health != null) health.TakeDamage(10);
 
-            shootEffect.HandleShoot(sourceTransform.position, hit.point, health != null ? Player : Ground);
+            shootEffectLegacy.HandleShoot(sourceTransform.position, hit.point, health != null ? Player : Ground);
         }
 
         private void ShootEffect()

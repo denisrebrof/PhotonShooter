@@ -3,7 +3,7 @@ using Zenject;
 
 namespace Health.presentation.HealthHandler
 {
-    public class PlayerHealthHandlerSync : HealthHandlerSyncBase
+    public class PlayerHealthSyncHandler : HealthSyncHandler
     {
         [Inject] private ICurrentPlayerHealthRepository currentPlayerHealthRepository;
         protected override string HandlerId => photonView.Controller.UserId;

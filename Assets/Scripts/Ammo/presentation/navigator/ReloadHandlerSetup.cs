@@ -1,11 +1,11 @@
 ﻿using UnityEngine;
 using Zenject;
 
-namespace Ammo.presentation.handler
+namespace Ammo.presentation.navigator
 {
     public class ReloadHandlerSetup : MonoBehaviour
     {
-        [Inject] private ReloadingNavigator navigator;
+        [Inject] private ReloadNavigator navigator;
         private IReloadHandler handler;
         private void Awake() => handler = GetComponent<IReloadHandler>();
 

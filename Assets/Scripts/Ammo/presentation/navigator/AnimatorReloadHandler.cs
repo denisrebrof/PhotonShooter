@@ -1,9 +1,9 @@
 ﻿using System;
 using UniRx;
 using UnityEngine;
-using static Ammo.presentation.handler.IReloadHandler;
+using static Ammo.presentation.navigator.IReloadHandler;
 
-namespace Ammo.presentation.handler
+namespace Ammo.presentation.navigator
 {
     public class AnimatorReloadHandler: MonoBehaviour, IReloadHandler
     {

@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Health.presentation.HealthHandler
 {
-    public abstract class HealthHandlerSyncBase : MonoBehaviourPun, IPunObservable
+    public abstract class HealthSyncHandler : MonoBehaviourPun, IPunObservable
     {
         [Inject] private IHealthHandlersRepository healthHandlersRepository;
         protected abstract string HandlerId { get; }

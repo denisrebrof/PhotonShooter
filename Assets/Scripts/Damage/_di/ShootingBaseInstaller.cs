@@ -7,7 +7,7 @@ namespace Damage._di
     {
         public override void InstallBindings()
         {
-            base.InstallBindings();
+            
         }
     }
 }

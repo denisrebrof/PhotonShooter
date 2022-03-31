@@ -14,7 +14,7 @@ namespace MatchState.presentation
         [Inject] private IMatchStateRepository stateRepository;
         [Inject] private IMatchTimerRepository timerRepository;
         [Inject] private StartMatchStateUseCase startMatchStateUseCase;
-        [Inject] private GetMatchStateTimerUpdatesUseCase getMatchStateTimerUpdatesUseCase;
+        [Inject] private MatchStateUpdatesUseCase matchStateUpdatesUseCase;
 
         [SerializeField] private MatchStates matchInitialState = MatchStates.Playing;
 
@@ -60,8 +60,8 @@ namespace MatchState.presentation
             PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
         }
 
-        private void HandleMatchStateUpdates() => getMatchStateTimerUpdatesUseCase
-            .GetMatchStateTimerUpdateRequestsFlow()
+        private void HandleMatchStateUpdates() => matchStateUpdatesUseCase
+            .GetUpdatesFlow()
             .Where(_ => PhotonNetwork.IsMasterClient)
             .Do(SetCurrentStateMatchParams)
             .Subscribe(ApplyMatchStateUpdate)

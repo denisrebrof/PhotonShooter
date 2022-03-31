@@ -17,7 +17,7 @@ namespace Health.data
             healthSubject = new BehaviorSubject<int>(maxHealth);
         }
 
-        public void SetHealth(int health) => healthSubject.OnNext(health);
+        void ICurrentPlayerHealthRepository.SetHealth(int health) => healthSubject.OnNext(health);
 
         public int GetHealth() => healthSubject.Value;
 

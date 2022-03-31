@@ -19,7 +19,7 @@ namespace MatchState._di
             Container.Bind<IMatchTimersDurationRepository>().FromInstance(timersSORepository).AsSingle();
             Container.Bind<IMatchTimerRepository>().To<MatchTimerInMemoryRepository>().AsSingle();
             //Domain
-            Container.Bind<GetMatchStateTimerUpdatesUseCase>().ToSelf().AsSingle();
+            Container.Bind<MatchStateUpdatesUseCase>().ToSelf().AsSingle();
             Container.Bind<GetNextMatchStateUseCase>().ToSelf().AsSingle();
             Container.Bind<GetTimerStateFlowUseCase>().ToSelf().AsSingle();
             Container.Bind<MatchStateDurationUseCase>().ToSelf().AsSingle();

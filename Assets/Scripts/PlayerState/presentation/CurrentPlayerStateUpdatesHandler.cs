@@ -7,7 +7,7 @@ using Zenject;
 
 namespace PlayerState.presentation
 {
-    public class PlayerStateUpdatesHandler : MonoBehaviour
+    public class CurrentPlayerStateUpdatesHandler : MonoBehaviour
     {
         [Inject] private ICurrentPlayerStateRepository repository;
         [Inject] private CurrentPlayerStateUpdatesUseCase updatesUseCase;

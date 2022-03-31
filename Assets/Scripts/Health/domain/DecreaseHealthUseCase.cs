@@ -11,7 +11,7 @@ namespace Health.domain
         [Inject] private ICurrentPlayerHealthRepository currentPlayerHealthRepository;
         public DecreaseHealthResult DecreaseHealth(int amount)
         {
-            var currentHealth = currentPlayerHealthRepository.GetHealth(); 
+            var currentHealth = currentPlayerHealthRepository.GetHealth();
             if (currentHealth <= 0)
                 return DecreaseHealthResult.NoHealth;
 

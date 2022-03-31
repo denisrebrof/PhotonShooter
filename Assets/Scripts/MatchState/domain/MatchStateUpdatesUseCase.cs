@@ -6,13 +6,13 @@ using Zenject;
 
 namespace MatchState.domain
 {
-    internal class GetMatchStateTimerUpdatesUseCase
+    internal class MatchStateUpdatesUseCase
     {
         [Inject] private TimerCompletedEventFlowUseCase timerCompletedEventFlowUseCase;
         [Inject] private IMatchStateRepository stateRepository;
         [Inject] private GetNextMatchStateUseCase getNextMatchStateUseCase;
 
-        public IObservable<MatchStates> GetMatchStateTimerUpdateRequestsFlow() => timerCompletedEventFlowUseCase
+        public IObservable<MatchStates> GetUpdatesFlow() => timerCompletedEventFlowUseCase
             .GetTimerCompletedEventFlow()
             .Select(_ => GetNextMatchState());
 

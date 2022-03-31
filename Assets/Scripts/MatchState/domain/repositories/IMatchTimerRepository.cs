@@ -1,11 +1,11 @@
 ﻿using System;
 
-namespace MatchState.domain
+namespace MatchState.domain.repositories
 {
     public interface IMatchTimerRepository
     {
         public IObservable<int> GetMatchTimeSecondsFlow();
-        public void StartTimer(int seconds);
-        public void StopTimer();
+        internal void StartTimer(int seconds);
+        internal void StopTimer();
     }
 }

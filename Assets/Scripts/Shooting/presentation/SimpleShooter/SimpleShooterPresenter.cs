@@ -7,7 +7,7 @@ namespace Shooting.presentation.SimpleShooter
 {
     public class SimpleShooterPresenter: MonoBehaviour
     {
-        [Inject] private 
+        // [Inject] private 
         private void Awake()
         {
             if(!this.GetPlayerId(out var shooterId)) return;

@@ -1,4 +1,4 @@
-﻿namespace PlayerState.domain
+﻿namespace PlayerState.domain.model
 {
     public enum PlayerStates
     {

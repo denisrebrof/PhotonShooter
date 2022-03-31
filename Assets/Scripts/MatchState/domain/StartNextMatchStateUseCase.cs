@@ -1,4 +1,5 @@
-﻿using Zenject;
+﻿using MatchState.domain.repositories;
+using Zenject;
 
 namespace MatchState.domain
 {

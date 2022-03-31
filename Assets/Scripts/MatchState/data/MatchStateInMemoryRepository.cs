@@ -1,15 +1,15 @@
 ﻿using System;
-using MatchState.domain;
 using MatchState.domain.model;
+using MatchState.domain.repositories;
 using UniRx;
 
 namespace MatchState.data
 {
-    public class MatchStateInMemoryRepository : IMatchStateRepository
+    internal class MatchStateInMemoryRepository : IMatchStateRepository
     {
         private readonly BehaviorSubject<MatchStates> matchStateSubject = new(MatchStates.None);
-
-        public void SetMatchState(MatchStates state)
+        
+        void IMatchStateRepository.SetMatchState(MatchStates state)
         {
             if (matchStateSubject.Value == state) return;
             matchStateSubject.OnNext(state);

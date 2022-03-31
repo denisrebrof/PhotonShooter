@@ -1,5 +1,6 @@
 ﻿using PlayerState.data;
 using PlayerState.domain;
+using PlayerState.domain.repositories;
 using UnityEngine;
 using Zenject;
 
@@ -10,7 +11,17 @@ namespace PlayerState._di
     {
         public override void InstallBindings()
         {
-            Container.Bind<IPlayerStateRepository>().To<PlayerStateInMemoryRepository>().AsSingle();
+            //Data
+            Container
+                .Bind<ICurrentPlayerLifecycleEventRepository>()
+                .To<CurrentPlayerLifecycleEventInMemoryRepository>()
+                .AsSingle();
+            Container
+                .Bind<ICurrentPlayerStateRepository>()
+                .To<CurrentPlayerStateInMemoryRepository>()
+                .AsSingle();
+            //Domain
+            Container.Bind<CurrentPlayerStateUpdatesUseCase>().ToSelf().AsSingle();
         }
     }
 }

@@ -4,13 +4,13 @@ using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
-using static MatchState.domain.GetTimerStatePerMatchStateFlowUseCase;
+using static MatchState.domain.GetTimerStateFlowUseCase;
 
 namespace MatchState.presentation
 {
     public class MatchTimerView : MonoBehaviour
     {
-        [Inject] private GetTimerStatePerMatchStateFlowUseCase getTimerStatePerMatchStateFlowUseCase;
+        [Inject] private GetTimerStateFlowUseCase getTimerStateFlowUseCase;
 
         [SerializeField, Tooltip("$ sign will be replaced with mm:ss timer")]
         private string template = "$";
@@ -18,7 +18,7 @@ namespace MatchState.presentation
         [SerializeField] private Text timerText;
         [SerializeField] private MatchStates observedState;
 
-        private void Start() => getTimerStatePerMatchStateFlowUseCase
+        private void Start() => getTimerStateFlowUseCase
             .GetTimerStateFlow(observedState)
             .Subscribe(HandleTimerState)
             .AddTo(this);

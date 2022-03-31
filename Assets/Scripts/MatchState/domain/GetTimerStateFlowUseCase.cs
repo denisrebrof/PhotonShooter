@@ -1,11 +1,12 @@
 ﻿using System;
 using MatchState.domain.model;
+using MatchState.domain.repositories;
 using UniRx;
 using Zenject;
 
 namespace MatchState.domain
 {
-    public class GetTimerStatePerMatchStateFlowUseCase
+    public class GetTimerStateFlowUseCase
     {
         [Inject] private IMatchStateRepository matchStateRepository;
         [Inject] private IMatchTimerRepository matchTimerRepository;

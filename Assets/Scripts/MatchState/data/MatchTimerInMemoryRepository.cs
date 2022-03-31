@@ -1,6 +1,7 @@
 ﻿using System;
 using JetBrains.Annotations;
 using MatchState.domain;
+using MatchState.domain.repositories;
 using UniRx;
 
 namespace MatchState.data
@@ -12,7 +13,7 @@ namespace MatchState.data
 
         public IObservable<int> GetMatchTimeSecondsFlow() => currentTimer;
 
-        public void StartTimer(int seconds)
+        void IMatchTimerRepository.StartTimer(int seconds)
         {
             timerSubscription?.Dispose();
             if (seconds < 0) return;
@@ -26,12 +27,14 @@ namespace MatchState.data
                 );
         }
 
-        public void StopTimer()
+        void IMatchTimerRepository.StopTimer() => DisposeTimer();
+
+        private void DisposeTimer()
         {
             timerSubscription?.Dispose();
             timerSubscription = null;
         }
 
-        ~MatchTimerInMemoryRepository() => StopTimer();
+        ~MatchTimerInMemoryRepository() => DisposeTimer();
     }
 }

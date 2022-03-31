@@ -1,4 +1,5 @@
 ﻿using MatchState.domain;
+using MatchState.domain.repositories;
 using UniRx;
 using UnityEngine;
 using Zenject;

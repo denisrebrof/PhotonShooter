@@ -2,13 +2,14 @@
 using Doozy.Engine;
 using MatchState.domain;
 using MatchState.domain.model;
+using MatchState.domain.repositories;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
 namespace MatchState.presentation
 {
-    public class MatchStateUIEventsHandler : MonoBehaviour
+    public class MatchStateUIEvents : MonoBehaviour
     {
         [Inject] private IMatchStateRepository matchStateRepository;
         [SerializeField] private string playingStateEvent = "PlayingState";

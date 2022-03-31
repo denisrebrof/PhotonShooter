@@ -1,6 +1,7 @@
 ﻿using ExitGames.Client.Photon;
 using MatchState.domain;
 using MatchState.domain.model;
+using MatchState.domain.repositories;
 using Photon.Pun;
 using UniRx;
 using UnityEngine;
@@ -13,7 +14,7 @@ namespace MatchState.presentation
         [Inject] private IMatchStateRepository stateRepository;
         [Inject] private IMatchTimerRepository timerRepository;
         [Inject] private StartMatchStateUseCase startMatchStateUseCase;
-        [Inject] private GetMatchStateTimerUpdateRequestsFlowUseCase getMatchStateTimerUpdateRequestsFlowUseCase;
+        [Inject] private GetMatchStateTimerUpdatesUseCase getMatchStateTimerUpdatesUseCase;
 
         [SerializeField] private MatchStates matchInitialState = MatchStates.Playing;
 
@@ -59,7 +60,7 @@ namespace MatchState.presentation
             PhotonNetwork.CurrentRoom.SetCustomProperties(customValue);
         }
 
-        private void HandleMatchStateUpdates() => getMatchStateTimerUpdateRequestsFlowUseCase
+        private void HandleMatchStateUpdates() => getMatchStateTimerUpdatesUseCase
             .GetMatchStateTimerUpdateRequestsFlow()
             .Where(_ => PhotonNetwork.IsMasterClient)
             .Do(SetCurrentStateMatchParams)

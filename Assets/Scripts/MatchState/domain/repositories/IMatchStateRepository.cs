@@ -1,12 +1,11 @@
 ﻿using System;
 using MatchState.domain.model;
-using UnityEngine;
 
-namespace MatchState.domain
+namespace MatchState.domain.repositories
 {
     public interface IMatchStateRepository
     {
-        public void SetMatchState(MatchStates state);
+        internal void SetMatchState(MatchStates state);
         public IObservable<MatchStates> GetMatchStateFlow();
         MatchStates GetMatchState();
     }

@@ -6,7 +6,7 @@ using UnityEngine.UI;
 using Zenject;
 using static MatchState.domain.GetTimerStateFlowUseCase;
 
-namespace MatchState.presentation
+namespace MatchState.presentation.UI
 {
     public class MatchTimerView : MonoBehaviour
     {

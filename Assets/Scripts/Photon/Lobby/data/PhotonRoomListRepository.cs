@@ -1,12 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using Photon.Lobby.domain;
 using Photon.Pun;
 using Photon.Realtime;
-using Photon.RoomList.domain;
 using UniRx;
 
-namespace Photon.RoomList.data
+namespace Photon.Lobby.data
 {
     public class PhotonRoomListRepository : MonoBehaviourPunCallbacks, IRoomListRepository
     {
@@ -27,7 +27,7 @@ namespace Photon.RoomList.data
 
         public List<RoomInfo> GetRoomsList() => rooms.Value;
 
-        //Photon requires it, don't delete
+        //Photon requires it, don't delete ???
         public override void OnEnable() => base.OnEnable();
 
         public override void OnDisable() => base.OnDisable();

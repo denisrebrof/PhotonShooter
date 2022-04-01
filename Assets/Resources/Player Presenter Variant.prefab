@@ -93,7 +93,6 @@ GameObject:
   m_Component:
   - component: {fileID: 5825583276043691877}
   - component: {fileID: 8534964923162634493}
-  - component: {fileID: 775378123392994617}
   m_Layer: 0
   m_Name: HealthUI
   m_TagString: Untagged
@@ -127,33 +126,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98fe940ce6f44c9982244cb8567db432, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  onHealthChanged:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 775378123392994617}
-        m_TargetAssemblyTypeName: ScenePlayerHealthPresenter, Health
-        m_MethodName: SetHealth
-        m_Mode: 0
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
---- !u!114 &775378123392994617
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7537205726960513824}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a1b7755d88d502c46988491403a5b153, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 6234673134146946754}
@@ -297,7 +269,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3048902662562778658, guid: 1f4c9c0ef6bb3df419cb253de9bedb7a, type: 3}
       propertyPath: m_Name
-      value: Player Presenter Variant Variant
+      value: Player Presenter Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1f4c9c0ef6bb3df419cb253de9bedb7a, type: 3}

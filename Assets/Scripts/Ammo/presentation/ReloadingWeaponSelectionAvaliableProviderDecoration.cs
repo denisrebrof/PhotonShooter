@@ -1,5 +1,6 @@
 ﻿using Ammo.domain;
 using Ammo.domain.model;
+using Ammo.domain.repository;
 using Zenject;
 using static Weapons.presentation.WeaponSelectionController;
 

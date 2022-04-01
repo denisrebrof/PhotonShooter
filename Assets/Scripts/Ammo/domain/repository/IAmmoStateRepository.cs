@@ -1,7 +1,7 @@
 ﻿using System;
 using Ammo.domain.model;
 
-namespace Ammo.domain
+namespace Ammo.domain.repository
 {
     public interface IAmmoStateRepository
     {

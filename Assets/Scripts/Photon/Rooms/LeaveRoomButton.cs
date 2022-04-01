@@ -3,7 +3,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
-namespace Photon.Room
+namespace Photon.Rooms
 {
     [RequireComponent(typeof(Button))]
     public class LeaveRoomButton : MonoBehaviourPunCallbacks

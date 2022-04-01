@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace Photon.Lobby.presentation
 {
-    public class RoomListItem : MonoBehaviour, RoomList.presentation.RoomList.IRoomListItem
+    public class RoomListItem : MonoBehaviour, RoomList.IRoomListItem
     {
         [SerializeField] private Text roomName;
         [SerializeField] private Text playersCount;

@@ -1,5 +1,6 @@
 ﻿using Ammo.data;
 using Ammo.domain;
+using Ammo.domain.repository;
 using UnityEngine;
 using Zenject;
 

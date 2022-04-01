@@ -1,12 +1,12 @@
 using System;
 using System.Collections.Generic;
+using Photon.Lobby.domain;
 using Photon.Realtime;
-using Photon.RoomList.domain;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace Photon.RoomList.presentation
+namespace Photon.Lobby.presentation
 {
     public class RoomList : MonoBehaviour
     {

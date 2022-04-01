@@ -1,14 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
 
-public class StartListener : MonoBehaviour
+namespace Utils
 {
-    [SerializeField] private UnityEvent onStart;
-    void Start()
+    public class StartListener : MonoBehaviour
     {
-        if(onStart!=null)
-            onStart.Invoke();
+        [SerializeField] private UnityEvent onStart;
+        void Start()
+        {
+            if(onStart!=null)
+                onStart.Invoke();
+        }
     }
 }

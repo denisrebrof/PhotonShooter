@@ -1,10 +1,9 @@
 ﻿using Health.domain.repositories;
-using JetBrains.Annotations;
 using Photon.Pun;
 using UnityEngine;
 using Zenject;
 
-namespace Health.presentation.HealthHandler
+namespace Health.presentation.SyncHandler
 {
     public abstract class HealthSyncHandler : MonoBehaviourPun, IPunObservable
     {

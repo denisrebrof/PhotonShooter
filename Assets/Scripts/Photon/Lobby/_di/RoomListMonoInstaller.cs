@@ -1,9 +1,9 @@
-﻿using Photon.RoomList.data;
-using Photon.RoomList.domain;
+﻿using Photon.Lobby.data;
+using Photon.Lobby.domain;
 using UnityEngine;
 using Zenject;
 
-namespace Photon.RoomList._di
+namespace Photon.Lobby._di
 {
     public class RoomListMonoInstaller : MonoInstaller
     {

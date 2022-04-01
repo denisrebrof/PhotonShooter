@@ -1,4 +1,3 @@
-using System.Collections.Generic;
 using System.Linq;
 using CrazyGames;
 using Plugins.VKSDK;
@@ -9,46 +8,48 @@ using SDK.Platform.domain;
 using UnityEngine;
 using Zenject;
 
-[CreateAssetMenu(menuName = "Installers/SDKInstaller")]
-public class SDKInstaller : ScriptableObjectInstaller
+namespace SDK._di
 {
-    [SerializeField] private Plugins.YSDK.YandexSDK yandexSDK;
-    [SerializeField] private VKSDK vksdk;
-    [SerializeField] private PokiUnitySDK pokiUnitySDK;
-
-    [SerializeField] private CrazySDK crazySDK;
-
-    public override void InstallBindings()
+    [CreateAssetMenu(menuName = "Installers/SDKInstaller")]
+    public class SDKInstaller : ScriptableObjectInstaller
     {
-        InstallGameStateNavigator();
-        InstallSDK();
-        InstallHappyTime();
-        InstallPlatformProvider();
-    }
+        [SerializeField] private Plugins.YSDK.YandexSDK yandexSDK;
+        [SerializeField] private VKSDK vksdk;
+        [SerializeField] private PokiUnitySDK pokiUnitySDK;
 
-    private void InstallHappyTime()
-    {
-        Container
-            .Bind<IHappyTimeController>()
+        [SerializeField] private CrazySDK crazySDK;
+
+        public override void InstallBindings()
+        {
+            InstallGameStateNavigator();
+            InstallSDK();
+            InstallHappyTime();
+            InstallPlatformProvider();
+        }
+
+        private void InstallHappyTime()
+        {
+            Container
+                .Bind<IHappyTimeController>()
 #if POKI_SDK
                 .To<PokiHappyTimeController>()
 #elif CRAZY_SDK
                 .To<CrazyHappyTimeController>()
 #else
-            .To<DebugLogHappyTimeController>()
+                .To<DebugLogHappyTimeController>()
 #endif
-            .AsSingle();
-    }
+                .AsSingle();
+        }
     
-    private void InstallGameStateNavigator()
-    {
-        var navigators = FindObjectsOfType<MonoBehaviour>().OfType<IGameStateNavigator>().ToList();
-        if(!navigators.Any()) return;
-        Container.Bind<IGameStateNavigator>().FromInstance(navigators.First()).AsSingle();
-    }
+        private void InstallGameStateNavigator()
+        {
+            var navigators = FindObjectsOfType<MonoBehaviour>().OfType<IGameStateNavigator>().ToList();
+            if(!navigators.Any()) return;
+            Container.Bind<IGameStateNavigator>().FromInstance(navigators.First()).AsSingle();
+        }
 
-    private void InstallSDK()
-    {
+        private void InstallSDK()
+        {
 #if YANDEX_SDK
             var instance = Instantiate(yandexSDK);
             instance.gameObject.name = "YandexSDK";
@@ -66,16 +67,17 @@ public class SDKInstaller : ScriptableObjectInstaller
         instance.gameObject.name = "CrazySDK";
         Container.Bind<CrazySDK>().FromInstance(instance).AsSingle();
 #endif
-    }
+        }
 
-    private void InstallPlatformProvider()
-    {
+        private void InstallPlatformProvider()
+        {
 #if YANDEX_SDK && !UNITY_EDITOR
         Container.Bind<IPlatformProvider>().To<YandexPlatformProvider>().AsSingle();
 // #elif UNITY_EDITOR
 //         Container.Bind<IPlatformProvider>().To<MobilePlatformProvider>().AsSingle();
 #else
-        Container.Bind<IPlatformProvider>().To<DesktopPlatformProvider>().AsSingle();
+            Container.Bind<IPlatformProvider>().To<DesktopPlatformProvider>().AsSingle();
 #endif
+        }
     }
 }

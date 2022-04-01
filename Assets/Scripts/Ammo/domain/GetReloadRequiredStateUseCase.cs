@@ -1,5 +1,6 @@
 ﻿using System;
 using Ammo.domain.model;
+using Ammo.domain.repository;
 using UniRx;
 using Zenject;
 

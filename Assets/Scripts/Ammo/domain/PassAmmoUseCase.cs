@@ -1,4 +1,5 @@
 ﻿using Ammo.domain.model;
+using Ammo.domain.repository;
 using Zenject;
 
 namespace Ammo.domain

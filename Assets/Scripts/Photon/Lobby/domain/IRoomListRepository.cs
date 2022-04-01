@@ -1,9 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using Photon.Realtime;
-using UniRx;
 
-namespace Photon.RoomList.domain
+namespace Photon.Lobby.domain
 {
     public interface IRoomListRepository
     {

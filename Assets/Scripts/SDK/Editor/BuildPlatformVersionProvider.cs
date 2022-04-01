@@ -1,7 +1,7 @@
 ﻿using SDK.SDKType;
 using UnityEngine;
 
-namespace SDK
+namespace SDK.Editor
 {
     public static class BuildPlatformVersionProvider
     {

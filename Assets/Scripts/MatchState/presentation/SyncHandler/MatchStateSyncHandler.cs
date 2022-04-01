@@ -7,7 +7,7 @@ using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace MatchState.presentation
+namespace MatchState.presentation.SyncHandler
 {
     public class MatchStateSyncHandler : MonoBehaviourPun
     {

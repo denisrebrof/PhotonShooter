@@ -14,7 +14,7 @@ namespace MatchState.presentation.DebugComponents
         private void Start()
         {
             matchTimerRepository.GetMatchTimeSecondsFlow().Subscribe(time => Debug.Log(time.ToString())).AddTo(this);
-            matchStateRepository.GetMatchStateFlow().Subscribe(state => Debug.Log("State: " + state)).AddTo(this);
+            matchStateRepository.GetMatchStateFlow().Subscribe(state => Debug.Log($"New Match State: {state}")).AddTo(this);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using Health.data;
 using Health.domain;
 using Health.domain.repositories;
-using Health.presentation.HealthHandler;
 using UnityEngine;
 using Zenject;
 
@@ -20,6 +19,7 @@ namespace Health._di
             Container.Bind<DecreaseHealthUseCase>().ToSelf().AsSingle();
             Container.Bind<IncreaseHealthUseCase>().ToSelf().AsSingle();
             Container.Bind<RestoreHealthUseCase>().ToSelf().AsSingle();
+            Container.Bind<RelativeHealthUseCase>().ToSelf().AsSingle();
         }
     }
 }

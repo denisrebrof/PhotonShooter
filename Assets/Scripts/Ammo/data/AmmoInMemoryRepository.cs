@@ -1,5 +1,6 @@
 ﻿using System;
 using Ammo.domain;
+using Ammo.domain.repository;
 using UniRx;
 
 namespace Ammo.data

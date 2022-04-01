@@ -1,12 +1,12 @@
 using System;
 using System.Linq;
-using Photon.RoomList.domain;
+using Photon.Lobby.domain;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;
 using Zenject;
 
-namespace Photon.RoomList.presentation
+namespace Photon.Lobby.presentation
 {
     [RequireComponent(typeof(Text))]
     public class RoomListCounterText : MonoBehaviour

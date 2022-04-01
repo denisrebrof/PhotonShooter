@@ -1,7 +1,7 @@
 ﻿using System;
 using UnityEngine;
 
-namespace Gameplay
+namespace Utils
 {
     public class TransformScaler: MonoBehaviour
     {

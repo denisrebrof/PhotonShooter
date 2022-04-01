@@ -1,4 +1,5 @@
 ﻿using Ammo.domain.model;
+using Ammo.domain.repository;
 using Weapons.domain.model;
 using Weapons.domain.repositories;
 using Zenject;

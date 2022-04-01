@@ -1,13 +1,11 @@
-﻿using System;
-using Doozy.Engine;
-using MatchState.domain;
+﻿using Doozy.Engine;
 using MatchState.domain.model;
 using MatchState.domain.repositories;
 using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace MatchState.presentation
+namespace MatchState.presentation.UI
 {
     public class MatchStateUIEvents : MonoBehaviour
     {

@@ -10,6 +10,7 @@ namespace MatchState._di
     [CreateAssetMenu(fileName = "MatchStateBaseInstaller", menuName = "Installers/MatchStateBaseInstaller", order = 0)]
     public class MatchStateBaseInstaller : ScriptableObjectInstaller
     {
+        // ReSharper disable once InconsistentNaming
         [SerializeField] private MatchTimersDurationScriptableObjectRepository timersSORepository;
         
         public override void InstallBindings()
@@ -17,7 +18,7 @@ namespace MatchState._di
             //Data
             Container.Bind<IMatchStateRepository>().To<MatchStateInMemoryRepository>().AsSingle();
             Container.Bind<IMatchTimersDurationRepository>().FromInstance(timersSORepository).AsSingle();
-            Container.Bind<IMatchTimerRepository>().To<MatchTimerInMemoryRepository>().AsSingle();
+            Container.Bind<IMatchTimerRepository>().To<MatchTimerSceneRepository>().FromNewComponentOnNewGameObject().AsSingle();
             //Domain
             Container.Bind<MatchStateUpdatesUseCase>().ToSelf().AsSingle();
             Container.Bind<GetNextMatchStateUseCase>().ToSelf().AsSingle();

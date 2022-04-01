@@ -22,6 +22,7 @@ namespace PlayerState._di
                 .AsSingle();
             //Domain
             Container.Bind<CurrentPlayerStateUpdatesUseCase>().ToSelf().AsSingle();
+            Container.Bind<PlayerLifecycleEventUseCase>().ToSelf().AsSingle();
         }
     }
 }

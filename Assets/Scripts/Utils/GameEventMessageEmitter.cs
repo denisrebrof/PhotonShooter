@@ -1,15 +1,18 @@
 using Doozy.Engine;
 using UnityEngine;
 
-public class GameEventMessageEmitter : MonoBehaviour
+namespace Utils
 {
-    [SerializeField] private string message;
-
-    public void Emit()
+    public class GameEventMessageEmitter : MonoBehaviour
     {
-        if(string.IsNullOrEmpty(message))
-            return;
+        [SerializeField] private string message;
+
+        public void Emit()
+        {
+            if(string.IsNullOrEmpty(message))
+                return;
         
-        GameEventMessage.SendEvent(message);
+            GameEventMessage.SendEvent(message);
+        }
     }
 }

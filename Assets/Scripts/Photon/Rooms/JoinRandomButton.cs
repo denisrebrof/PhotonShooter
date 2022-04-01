@@ -1,10 +1,9 @@
-using System;
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
 using UnityEngine.UI;
 
-namespace Photon.Room
+namespace Photon.Rooms
 {
     [RequireComponent(typeof(Button))]
     public class JoinRandomButton : MonoBehaviourPunCallbacks

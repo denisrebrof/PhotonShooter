@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Ammo.domain
+namespace Ammo.domain.repository
 {
     public interface IAmmoRepository
     {

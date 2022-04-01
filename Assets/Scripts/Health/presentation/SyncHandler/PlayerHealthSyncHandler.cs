@@ -1,7 +1,7 @@
 ﻿using Health.domain.repositories;
 using Zenject;
 
-namespace Health.presentation.HealthHandler
+namespace Health.presentation.SyncHandler
 {
     public class PlayerHealthSyncHandler : HealthSyncHandler
     {

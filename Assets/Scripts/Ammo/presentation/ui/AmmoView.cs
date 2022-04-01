@@ -1,4 +1,5 @@
 ﻿using Ammo.domain;
+using Ammo.domain.repository;
 using UniRx;
 using UnityEngine;
 using UnityEngine.UI;

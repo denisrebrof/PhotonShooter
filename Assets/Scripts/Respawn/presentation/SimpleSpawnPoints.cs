@@ -1,15 +1,13 @@
 ﻿using Respawn.domain.model;
 using Respawn.domain.repositories;
-using UniRx;
 using UnityEngine;
 using Zenject;
 
 namespace Respawn.presentation
 {
-    public class SimpleSpawnPositionalPresenter : MonoBehaviour
+    public class SimpleSpawnPoints : MonoBehaviour, ISpawnPositionNavigator
     {
         [Inject] private ISpawnPointRepository spawnPointRepository;
-        [Inject] private ICurrentPlayerSpawnEventRepository spawnEventRepository;
         [SerializeField] private Transform[] spawnPoints;
         [SerializeField] private int defaultSpawnCooldown = 10;
 
@@ -20,12 +18,8 @@ namespace Respawn.presentation
                 var point = new SpawnPoint(i, defaultSpawnCooldown);
                 spawnPointRepository.AddSpawnPoint(point);
             }
-
-            spawnEventRepository
-                .GetSpawnEventFlow()
-                .Select(spawnEvent => spawnPoints[spawnEvent.PointId].position)
-                .Subscribe(position => GameObject.FindWithTag("Player").transform.position = position)
-                .AddTo(this);
         }
+
+        public Transform GetPointTransform(int pointId) => spawnPoints[pointId];
     }
 }

@@ -169,6 +169,30 @@ MonoBehaviour:
   canRun: 1
   runSpeed: 9
   runningKey: 304
+--- !u!114 &1859583078146915571
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039984566256761172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3be07af8f3674a988f3c03b0353a2a1f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &6043829442054688074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9039984566256761172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d26af6d0a7c84777993a6798ee8b5d4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9040868999514885216 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3047816219678636822, guid: 1f4c9c0ef6bb3df419cb253de9bedb7a, type: 3}

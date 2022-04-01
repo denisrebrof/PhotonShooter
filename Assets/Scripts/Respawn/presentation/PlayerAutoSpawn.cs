@@ -6,7 +6,7 @@ using Zenject;
 
 namespace Respawn.presentation
 {
-    public class AutoSpawnHandler : MonoBehaviour
+    public class PlayerAutoSpawn : MonoBehaviour
     {
         [Inject] private SpawnCurrentPlayerAvailableUseCase spawnCurrentPlayerAvailableUseCase;
         [Inject] private RandomOrFirstAvailableSpawnPointUseCase randomOrFirstAvailableSpawnPointUseCase;

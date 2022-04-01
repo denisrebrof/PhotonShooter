@@ -1,6 +1,7 @@
 ﻿using Respawn.data;
 using Respawn.domain;
 using Respawn.domain.repositories;
+using Respawn.presentation;
 using UnityEngine;
 using Zenject;
 
@@ -29,6 +30,9 @@ namespace Respawn._di
             Container.Bind<SpawnCurrentPlayerAvailableUseCase>().ToSelf().AsSingle();
             Container.Bind<SpawnCurrentPlayerUseCase>().ToSelf().AsSingle();
             Container.Bind<RandomOrFirstAvailableSpawnPointUseCase>().ToSelf().AsSingle();
+            //Presentation
+            var positionNavigator = FindObjectOfType<SimpleSpawnPoints>();
+            Container.Bind<ISpawnPositionNavigator>().FromInstance(positionNavigator).AsSingle();
         }
     }
 }

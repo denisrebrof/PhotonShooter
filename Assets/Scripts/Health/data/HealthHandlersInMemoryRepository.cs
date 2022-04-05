@@ -5,7 +5,7 @@ using Utils;
 
 namespace Health.data
 {
-    public class HealthHandlersImMemoryRepository : IHealthHandlersRepository
+    public class HealthHandlersInMemoryRepository : IHealthHandlersRepository
     {
         private readonly ReactiveDictionary<string, int> handlerIdToHealthMap = new();
 

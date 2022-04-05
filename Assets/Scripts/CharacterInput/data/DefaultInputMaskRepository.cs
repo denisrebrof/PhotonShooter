@@ -7,13 +7,13 @@ namespace CharacterInput.data
 {
     public class DefaultInputMaskRepository: IInputMaskRepository
     {
-        private Dictionary<InputState, IInputMask> masksMap = new()
+        private Dictionary<CharacterInputState, IInputMask> masksMap = new()
         {
-            { InputState.Disabled, new InclusiveInputMask() },
-            { InputState.Full, new ExclusiveInputMask() },
+            { CharacterInputState.Disabled, new InclusiveInputMask() },
+            { CharacterInputState.Full, new ExclusiveInputMask() },
         };
 
-        public IInputMask GetInputMask(InputState state)
+        public IInputMask GetInputMask(CharacterInputState state)
         {
             return masksMap[state];
         }

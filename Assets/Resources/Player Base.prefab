@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 2750731563342413186}
   - component: {fileID: 7419711162927843186}
   - component: {fileID: 6969830759529376647}
+  - component: {fileID: 1212734412409636308}
   - component: {fileID: 6381613930917924764}
   m_Layer: 0
   m_Name: Player Base
@@ -104,6 +105,7 @@ MonoBehaviour:
   ObservedComponents:
   - {fileID: 2750731563342413186}
   - {fileID: 7419711162927843186}
+  - {fileID: 1212734412409636308}
   sceneViewId: 0
   InstantiationId: 0
   isRuntimeInstantiated: 0
@@ -175,6 +177,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 05ebd73026c440758b7c5f58befc1eae, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1212734412409636308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3048902662562778658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c18389410024faaa615a9a100449c51, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &6381613930917924764

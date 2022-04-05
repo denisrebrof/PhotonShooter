@@ -4,6 +4,6 @@ namespace CharacterInput.domain.repositories
 {
     public interface IInputMaskRepository
     {
-        public IInputMask GetInputMask(InputState state);
+        public IInputMask GetInputMask(CharacterInputState state);
     }
 }

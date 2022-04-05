@@ -9,8 +9,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 050cd51b2da24870884456a077372c2f, type: 3}
-  m_Name: MatchTimersDurationScriptableObjectRepository
+  m_Script: {fileID: 11500000, guid: 021b68a8a0054f80ae6a9ab91e87cba7, type: 3}
+  m_Name: MovementBaseInstaller
   m_EditorClassIdentifier: 
-  matchDurationTimer: 60
-  matchRestartTimer: 3

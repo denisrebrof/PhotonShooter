@@ -26,7 +26,6 @@ namespace Health.presentation.SyncHandler
         {
             var health = (int) stream.ReceiveNext();
             healthHandlersRepository.SetHealth(HandlerId, health);
-            Debug.Log("Receive Health: " + health + " HandlerId: " + HandlerId);
         }
     }
 }

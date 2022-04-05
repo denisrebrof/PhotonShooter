@@ -13,11 +13,9 @@ namespace Health.presentation.UI
 
         private void Start()
         {
-            Debug.Log("HealthProvider: try");
             if (!this.GetPlayerId(out var userId))
                 return;
             
-            Debug.Log("HealthProvider: " + userId);
             relativeHealthUseCase
                 .GetRelativeHealthFlow(userId)
                 .Subscribe(ApplyHealth)

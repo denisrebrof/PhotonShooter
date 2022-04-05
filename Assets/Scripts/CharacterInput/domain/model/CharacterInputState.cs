@@ -1,6 +1,6 @@
 ﻿namespace CharacterInput.domain.model
 {
-    public enum InputState
+    public enum CharacterInputState
     {
         Full,
         Disabled

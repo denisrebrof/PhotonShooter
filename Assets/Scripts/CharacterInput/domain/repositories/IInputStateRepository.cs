@@ -4,6 +4,6 @@ namespace CharacterInput.domain.repositories
 {
     public interface IInputStateRepository
     {
-        public InputState GetInputState();
+        public CharacterInputState GetInputState();
     }
 }

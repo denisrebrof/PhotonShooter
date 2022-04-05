@@ -6,7 +6,7 @@
         public int YAxis;
         public bool Jumping;
 
-        public MovementState(int xAxis, int yAxis, bool jumping)
+        public MovementState(int xAxis = 0, int yAxis = 0, bool jumping = false)
         {
             XAxis = xAxis;
             YAxis = yAxis;

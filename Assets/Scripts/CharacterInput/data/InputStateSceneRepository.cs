@@ -8,12 +8,12 @@ namespace CharacterInput.data
 {
     public class InputStateSceneRepository: MonoBehaviour, IInputStateRepository
     {
-        [SerializeField] private InputState state = InputState.Full;
+        [SerializeField] private CharacterInputState state = CharacterInputState.Full;
 
-        public void SetInputOn() => state = InputState.Full;
+        public void SetInputOn() => state = CharacterInputState.Full;
         
-        public void SetInputOff() => state = InputState.Disabled;
+        public void SetInputOff() => state = CharacterInputState.Disabled;
 
-        public InputState GetInputState() => state;
+        public CharacterInputState GetInputState() => state;
     }
 }

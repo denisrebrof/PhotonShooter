@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Linq;
-using MatchState.domain;
 using MatchState.domain.model;
 using MatchState.domain.repositories;
 using PlayerState.domain.model;
@@ -15,7 +14,7 @@ namespace PlayerState.domain
         [Inject] private IMatchStateRepository matchStateRepository;
         [Inject] private ICurrentPlayerLifecycleEventRepository lifecycleEventRepository;
 
-        private MatchStates[] idleStates = {MatchStates.Preparing, MatchStates.Finished};
+        private MatchStates[] idleStates = { MatchStates.Preparing, MatchStates.Finished };
 
         public IObservable<PlayerStates> GetPlayerStateUpdatesFlow() => matchStateRepository
             .GetMatchStateFlow()
@@ -27,14 +26,14 @@ namespace PlayerState.domain
             if (idleStates.Contains(matchState)) return Observable.Return(PlayerStates.Idle);
             if (matchState != MatchStates.Playing) return Observable.Return(PlayerStates.None);
             var gameplayPlayerStatesFlow = lifecycleEventRepository.GetLifecycleEvents().Select(GetNewPlayerState);
-            return gameplayPlayerStatesFlow.StartWith(PlayerStates.Spawning);
+            return gameplayPlayerStatesFlow.Merge(Observable.Return(PlayerStates.Spawning));
         }
 
         private static PlayerStates GetNewPlayerState(PlayerLifecycleEvent lifecycleEvent) => lifecycleEvent switch
         {
             PlayerLifecycleEvent.Spawned => PlayerStates.Playing,
             PlayerLifecycleEvent.Died => PlayerStates.Dead,
-            PlayerLifecycleEvent.Preparing => PlayerStates.Spawning,
+            PlayerLifecycleEvent.ReadyToSpawn => PlayerStates.Spawning,
             _ => throw new ArgumentOutOfRangeException(nameof(lifecycleEvent), lifecycleEvent, null)
         };
     }

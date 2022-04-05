@@ -1,3 +1,4 @@
+using Movement.presentation;
 using Photon.Pun;
 using UnityEngine;
 
@@ -98,10 +99,10 @@ public class Crouch : MonoBehaviourPun
         if(!photonView.IsMine || !PhotonNetwork.IsConnected)
             return;
         
-        if (state && !character.speedOverrides.Contains(SpeedOverride))
-            character.speedOverrides.Add(SpeedOverride);
-        if (!state && character.speedOverrides.Contains(SpeedOverride))
-            character.speedOverrides.Remove(SpeedOverride);
+        if (state && !character.SpeedOverrides.Contains(SpeedOverride))
+            character.SpeedOverrides.Add(SpeedOverride);
+        if (!state && character.SpeedOverrides.Contains(SpeedOverride))
+            character.SpeedOverrides.Remove(SpeedOverride);
     }
 
     float SpeedOverride() => crouchSpeed;

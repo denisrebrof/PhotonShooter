@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Linq;
 using UniRx;
 
 namespace Utils
@@ -18,6 +17,15 @@ namespace Utils
                 .Select(replaceEvent => replaceEvent.NewValue);
             var itemFlow = addFlow.Merge(replaceFlow);
             return target.ContainsKey(key) ? itemFlow.StartWith(target[key]) : itemFlow;
+        }
+
+        public static IObservable<TV> GetItemFlow<TK, TV>(
+            this ReactiveDictionary<TK, TV> target,
+            TK key,
+            TV defaultItem)
+        {
+            var flow = target.GetItemFlow(key);
+            return target.ContainsKey(key) ? flow : flow.StartWith(defaultItem);
         }
     }
 }

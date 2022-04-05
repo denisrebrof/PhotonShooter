@@ -1,22 +1,24 @@
 ﻿using System;
 using Ammo.presentation.navigator;
+using CharacterInput.domain;
+using CharacterInput.domain.model;
 using UniRx;
 using UnityEngine;
-using Weapons.presentation.utils;
 using Zenject;
 
 namespace Ammo.presentation
 {
     public class ReloadingController: MonoBehaviour
     {
-        [Inject] private ReloadNavigator navigator;
-
-        private void Start() => Observable.EveryUpdate().Subscribe(_ => HandleReloadInput()).AddTo(this);
         
-        private void HandleReloadInput()
+        [Inject] private ReloadNavigator navigator;
+        [Inject] private CharacterInputUseCase inputUseCase;
+
+        private void Update()
         {
-            if (!Input.GetKeyDown(KeyCode.R)) return;
-            navigator.StartReloading().Subscribe(result => Debug.Log(result)).AddTo(this);
+            if (!(inputUseCase.GetAxis(CharacterInputAxis.Reload) > 0f)) return;
+            
+            navigator.StartReloading().Subscribe().AddTo(this);
         }
     }
 }

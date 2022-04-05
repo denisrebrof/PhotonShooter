@@ -1,29 +1,37 @@
 using Photon.Pun;
 using Photon.Realtime;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Photon
 {
     public class ConnectedIndicator : MonoBehaviourPunCallbacks
     {
-        [SerializeField] private GameObject connectionMark;
+        [SerializeField] private string connectedCaption = "Ready!";
+        [SerializeField] private string notConnectedCaption = "Connecting...";
+        [SerializeField] private Text connectionStateText;
 
         public override void OnEnable()
         {
             base.OnEnable();
-            connectionMark.SetActive(!PhotonNetwork.IsConnectedAndReady);
+            SetConnected(PhotonNetwork.IsConnectedAndReady);
         }
 
         public override void OnConnectedToMaster()
         {
             base.OnConnectedToMaster();
-            connectionMark.SetActive(false);
+            SetConnected(true);
         }
 
         public override void OnDisconnected(DisconnectCause cause)
         {
             base.OnDisconnected(cause);
-            connectionMark.SetActive(true);
+            SetConnected(false);
+        }
+
+        private void SetConnected(bool connected)
+        {
+            connectionStateText.text = connected ? connectedCaption : notConnectedCaption;
         }
     }
 }

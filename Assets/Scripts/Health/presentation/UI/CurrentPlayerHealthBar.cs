@@ -3,7 +3,7 @@ using UniRx;
 using UnityEngine;
 using Zenject;
 
-namespace Health.presentation
+namespace Health.presentation.UI
 {
     public class CurrentPlayerHealthBar : MonoBehaviour
     {

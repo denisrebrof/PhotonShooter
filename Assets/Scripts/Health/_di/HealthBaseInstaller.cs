@@ -20,6 +20,7 @@ namespace Health._di
             Container.Bind<IncreaseHealthUseCase>().ToSelf().AsSingle();
             Container.Bind<RestoreHealthUseCase>().ToSelf().AsSingle();
             Container.Bind<RelativeHealthUseCase>().ToSelf().AsSingle();
+            Container.Bind<CurrentPlayerDeathEventUseCase>().ToSelf().AsSingle();
         }
     }
 }

@@ -14,7 +14,10 @@ namespace Respawn.domain
         public IObservable<bool> GetSpawnAvailableFlow(int pointId)
         {
             var cooldownFlow = spawnPointCooldownRepository.GetCooldownFlow(pointId);
-            return matchStateRepository.GetMatchStateFlow().CombineLatest(cooldownFlow, GetSpawnAvailable);
+            return matchStateRepository
+                .GetMatchStateFlow()
+                .CombineLatest(cooldownFlow, GetSpawnAvailable)
+                .DistinctUntilChanged();
         }
 
         public bool GetSpawnAvailable(int pointId)

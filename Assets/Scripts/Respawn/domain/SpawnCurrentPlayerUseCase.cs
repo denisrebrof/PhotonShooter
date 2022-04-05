@@ -13,9 +13,10 @@ namespace Respawn.domain
         [Inject] private SpawnPointAvailableUseCase spawnPointAvailableUseCase;
         [Inject] private ISpawnPointRepository spawnPointRepository;
         [Inject] private ICurrentPlayerSpawnEventRepository spawnEventRepository;
-        [Inject] private PlayerLifecycleEventUseCase lifecycleEventUseCase;
+        [Inject] private ICurrentPlayerLifecycleEventRepository lifecycleEventRepository;
+        [Inject] private ISpawnPointCooldownRepository spawnPointCooldownRepository;
 
-        public SpawnResult TrySpawn(int pointId)
+        public SpawnResult Spawn(int pointId)
         {
             if (!spawnCurrentPlayerAvailableUseCase.GetSpawnAvailable())
                 return SpawnResult.CouldNotSpawn;
@@ -25,7 +26,8 @@ namespace Respawn.domain
 
             var point = spawnPointRepository.GetSpawnPoint(pointId);
             spawnEventRepository.AddSpawnEvent(SpawnEvent.FromPointDefault(point));
-            lifecycleEventUseCase.Send(PlayerLifecycleEvent.Spawned);
+            lifecycleEventRepository.SendLifecycleEvent(PlayerLifecycleEvent.Spawned);
+            spawnPointCooldownRepository.SetCooldown(point.PointId, point.DefaultCooldown);
             return SpawnResult.Success;
         }
 

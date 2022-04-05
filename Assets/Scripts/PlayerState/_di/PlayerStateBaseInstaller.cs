@@ -7,7 +7,7 @@ using Zenject;
 namespace PlayerState._di
 {
     [CreateAssetMenu(menuName = "Installers/PlayerStateBaseInstaller")]
-    public class PlayerStateBaseInstaller: ScriptableObjectInstaller
+    public class PlayerStateBaseInstaller : ScriptableObjectInstaller
     {
         public override void InstallBindings()
         {
@@ -22,7 +22,6 @@ namespace PlayerState._di
                 .AsSingle();
             //Domain
             Container.Bind<CurrentPlayerStateUpdatesUseCase>().ToSelf().AsSingle();
-            Container.Bind<PlayerLifecycleEventUseCase>().ToSelf().AsSingle();
         }
     }
 }

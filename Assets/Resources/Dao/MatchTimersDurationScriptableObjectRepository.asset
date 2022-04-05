@@ -12,5 +12,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 050cd51b2da24870884456a077372c2f, type: 3}
   m_Name: MatchTimersDurationScriptableObjectRepository
   m_EditorClassIdentifier: 
-  matchDurationTimer: 10
-  matchRestartTimer: 10
+  matchDurationTimer: 15
+  matchRestartTimer: 5

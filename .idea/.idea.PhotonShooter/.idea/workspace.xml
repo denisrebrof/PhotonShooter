@@ -1,182 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9852729a-6dbd-4b67-98ad-99ccfaf73d18" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.PhotonShooter/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.PhotonShooter/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/Soundy/_SoundyDatabase.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/Data/Soundy/_SoundyDatabase.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Doozy/Engine/Resources/DoozySettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/FPS Character Animation Pack/00_Version 1.5b/FPS_Character _Animation_Pack_v1.5b.unitypackage.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon/PhotonUnityNetworking/Resources/PhotonServerSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Resources/Dao/MatchTimersDurationScriptableObjectRepository.asset.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Resources/Dao/MatchTimersDurationScriptableObjectRepository.asset.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Gameplay.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Ammo/presentation/ReloadingController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Ammo/presentation/ReloadingController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/CharacterInput.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/CharacterInput.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/_di.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/_di.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/_di/CharacterInputInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/_di/CharacterInputInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/CharacterInputSceneRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/CharacterInputSceneRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/DefaultInputMaskRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/DefaultInputMaskRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/InputStateSceneRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/data/InputStateSceneRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/CharacterInputUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/CharacterInputUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/InputSuspendedUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/InputSuspendedUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/CharacterInputAxis.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/CharacterInputAxis.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/CharacterInputState.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/CharacterInputState.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/ExclusiveInputMask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/ExclusiveInputMask.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/IInputMask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/IInputMask.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/InclusiveInputMask.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/model/InputMask/InclusiveInputMask.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/ICharacterInputRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/ICharacterInputRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/IInputMaskRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/IInputMaskRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/IInputStateRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CharacterInput/domain/repositories/IInputStateRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/AnimatorInputHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/AnimatorInputHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/AnimatorVelocityVariable.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/AnimatorVelocityVariable.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DestroyGameObject.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/DestroyGameObject.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MatBlink.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MatBlink.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovingZone.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/MovingZone.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerIK.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerIK.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerTrigger.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/PlayerTrigger.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RotationLimitedSync.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/RotationLimitedSync.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Shake.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/Shake.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/SlerpToLookAt.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/SlerpToLookAt.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Gameplay/TempLine.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Gameplay/TempLine.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/data/HealthHandlersInMemoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/data/HealthHandlersInMemoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/domain/CurrentPlayerDeathEventUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/domain/CurrentPlayerDeathEventUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/CurrentPlayerDeathEventHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/CurrentPlayerDeathEventHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/RestoreHealthOnSpawnHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/RestoreHealthOnSpawnHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/UI/PlayerHealthTransformBar.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Health/presentation/UI/PlayerHealthTransformBar.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/MatchState.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/MatchState.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/_di/MatchStateBaseInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/_di/MatchStateBaseInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/data/MatchTimerSceneRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/data/MatchTimerSceneRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/data/MatchTimersDurationScriptableObjectRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/data/MatchTimersDurationScriptableObjectRepository.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetNextMatchStateUseCase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetNextMatchStateUseCase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetTimerStateFlowUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetTimerStateFlowUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetTimerStateFlowUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/GetTimerStateFlowUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/MatchStateDurationUseCase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/MatchStateDurationUseCase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/MatchStateUpdatesUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/MatchStateUpdatesUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/StartMatchStateUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/StartMatchStateUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/StartNextMatchStateUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/StartNextMatchStateUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/TimerCompletedEventFlowUseCase.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/TimerCompletedEventFlowUseCase.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/repositories/IMatchTimerRepository.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/repositories/IMatchTimerRepository.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/repositories/IMatchTimersDurationRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/domain/repositories/IMatchTimersDurationRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/DebugComponents/MatchStateDebug.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/DebugComponents/MatchStateDebug.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/SyncHandler/MatchStateSyncHandler.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/SyncHandler/MatchStateSyncHandler.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/UI/MatchTimerView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/MatchState/presentation/UI/MatchTimerView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/data/MovementStateInMemoryRepository.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/data/MovementStateInMemoryRepository.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/domain/CurrentPlayerMovementStateUseCase.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/domain/CurrentPlayerMovementStateUseCase.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/AnimatorCharacterMovementPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/AnimatorCharacterMovementPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/FirstPersonLook.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/FirstPersonLook.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/FirstPersonMovement.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Movement/presentation/FirstPersonMovement.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/ConnectedIndicator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/ConnectedIndicator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Gameplay/CameraAttractor.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Gameplay/CameraAttractor.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Gameplay/PlayerInstanceSync.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Gameplay/PlayerInstanceSync.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/_di.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/_di.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/_di/RoomListMonoInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/_di/RoomListMonoInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/data.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/data/PhotonRoomListRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/data/PhotonRoomListRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/domain.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/domain.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/domain/IRoomListRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/domain/IRoomListRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/LobbyButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/LobbyButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/LobbyScreen.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/LobbyScreen.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomList.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomList.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomListCounterText.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomListCounterText.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomListItem.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Lobby/presentation/RoomListItem.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/PhotonGameLoader.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/PhotonGameLoader.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/PhotonLauncher.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/PhotonLauncher.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/CreateRoomButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/CreateRoomButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/JoinRandomButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/JoinRandomButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/LeaveRoomButton.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Photon/Rooms/LeaveRoomButton.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/PlayerState.asmdef" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/PlayerState.asmdef" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/_di/PlayerStateBaseInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/_di/PlayerStateBaseInstaller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/data/CurrentPlayerLifecycleEventInMemoryRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/data/CurrentPlayerLifecycleEventInMemoryRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/data/CurrentPlayerStateInMemoryRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/data/CurrentPlayerStateInMemoryRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/CurrentPlayerStateUpdatesUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/CurrentPlayerStateUpdatesUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/model/PlayerLifecycleEvent.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/model/PlayerLifecycleEvent.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/repositories/ICurrentPlayerLifecycleEventRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/repositories/ICurrentPlayerLifecycleEventRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/repositories/ICurrentPlayerStateRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/domain/repositories/ICurrentPlayerStateRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/presentation/AutoReadyAfterDeathHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/presentation/AutoReadyAfterDeathHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerState/presentation/DebugComponents/CurrentPlayerStateDebug.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerState/presentation/DebugComponents/CurrentPlayerStateDebug.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/Respawn.asmdef.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/Respawn.asmdef.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/_di.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/_di.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/_di/RespawnBaseInstaller.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/_di/RespawnBaseInstaller.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/data.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/data.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/SpawnPointCooldownSceneRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/SpawnPointCooldownSceneRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/SpawnPointInMemoryRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/SpawnPointInMemoryRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/СurrentPlayerSpawnEventInMemoryRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/data/СurrentPlayerSpawnEventInMemoryRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/RandomOrFirstAvailableSpawnPointUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/RandomOrFirstAvailableSpawnPointUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnCurrentPlayerAvailableUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnCurrentPlayerAvailableUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnCurrentPlayerUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnCurrentPlayerUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnPointAvailableUseCase.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/SpawnPointAvailableUseCase.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model/SpawnEvent.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model/SpawnEvent.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model/SpawnPoint.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/model/SpawnPoint.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ICurrentPlayerSpawnEventRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ICurrentPlayerSpawnEventRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ISpawnPointCooldownRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ISpawnPointCooldownRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ISpawnPointRepository.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/domain/repositories/ISpawnPointRepository.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/PlayerRandomPointSpawnHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/PlayerRandomPointSpawnHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/ISpawnPositionNavigator.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/ISpawnPositionNavigator.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/PlayerSpawnHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/PlayerSpawnHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/SimpleSpawnPoints.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/SimpleSpawnPoints.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/SpawnPointView.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/Spawner/SpawnPointView.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/SyncHandler.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/SyncHandler.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/SyncHandler/SpawnCooldownSyncHandler.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Respawn/presentation/SyncHandler/SpawnCooldownSyncHandler.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooting/presentation/SimpleShooter/SimplePlayerWeaponShooter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooting/presentation/SimpleShooter/SimplePlayerWeaponShooter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooting/presentation/SimpleShooter/SimpleShooterPresenter.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooting/presentation/SimpleShooter/SimpleShooterPresenter.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/InviteButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/InviteButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/ShareButton.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/ShareButton.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/ShareRecordListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/ShareRecordListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/SocialBlock.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Social/SocialBlock.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/GameEventMessageEmitter.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/GameEventMessageEmitter.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/NumericInput.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/NumericInput.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ParticleSystemAutoDestroy.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ParticleSystemAutoDestroy.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PhotonStreamExtentions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PhotonStreamExtentions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PhotonUtilityExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/PhotonUtilityExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RigidbodyMovementListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RigidbodyMovementListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Rotator.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/Rotator.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RxExtensions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RxExtensions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RxExtentions.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/RxExtentions.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ScaleTweener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/ScaleTweener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/StartListener.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/StartListener.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TransformScaler.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Utils/TransformScaler.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Weapons/presentation/WeaponSelectionController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Weapons/presentation/WeaponSelectionController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/EditorUserSettings.asset" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/UserSettings/Layouts/default-2021.dwlt" afterDir="false" />
-    </list>
+    <list default="true" id="9852729a-6dbd-4b67-98ad-99ccfaf73d18" name="Changes" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -209,10 +34,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="1656">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="1656" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -228,7 +53,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1649358947763</updated>
-      <workItem from="1649358954211" duration="1507000" />
+      <workItem from="1649358954211" duration="1826000" />
     </task>
     <servers />
   </component>

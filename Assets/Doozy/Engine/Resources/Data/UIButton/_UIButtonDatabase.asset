@@ -16,7 +16,5 @@ MonoBehaviour:
   CategoryNames:
   - Custom
   - General
-  - MainMenu
   Categories:
-  - {fileID: 11400000, guid: 5a90d85a8dd98ca47849d8161385cd79, type: 2}
-  - {fileID: 11400000, guid: a6d67638b2f425844940c46b18a04f5c, type: 2}
+  - {fileID: 11400000, guid: 568c5c75d19049343a4c51c35f6afdd2, type: 2}

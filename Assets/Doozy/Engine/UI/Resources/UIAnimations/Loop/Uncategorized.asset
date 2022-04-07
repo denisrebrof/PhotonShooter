@@ -15,10 +15,10 @@ MonoBehaviour:
   AnimationNames:
   - Default
   Database:
-  - {fileID: 5258527001433140159}
+  - {fileID: 5936701011930458327}
   DatabaseName: Uncategorized
   DataType: 3
---- !u!114 &5258527001433140159
+--- !u!114 &5936701011930458327
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

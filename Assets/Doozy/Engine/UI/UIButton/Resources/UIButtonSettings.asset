@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e613985aa83548b88a79c1663775dcbe, type: 3}
   m_Name: UIButtonSettings
   m_EditorClassIdentifier: 
-  database: {fileID: 11400000, guid: cffdddeb0bc1c5143abd5e69286e21e1, type: 2}
+  database: {fileID: 11400000, guid: f942ab5b66f91114db3bb1750cb65f2d, type: 2}
   InputMode: 2
   KeyCode: 13
   KeyCodeAlt: 32

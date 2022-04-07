@@ -117,7 +117,7 @@ namespace Doozy.Engine
         /// <param name="debug"> Print info debug messages to console? </param>
         public static void ProcessGameEvent(GameEventMessage message, bool debug = false)
         {
-            if (message == null) return;
+            if (message == null || Instance== null) return;
             if (Instance.DebugComponent || debug && !message.IsSystemEvent) DDebug.Log("Received '" + message.EventName + "' game event.", Instance);
             if (!message.IsSystemEvent) return;
             var @event = (SystemGameEvent) Enum.Parse(typeof(SystemGameEvent), message.EventName);

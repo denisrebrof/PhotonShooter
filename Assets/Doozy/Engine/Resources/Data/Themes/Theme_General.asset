@@ -10,43 +10,43 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2a151aae416b497c9eaea8aa5ac1c555, type: 3}
-  m_Name: Theme_General
+  m_Name: General
   m_EditorClassIdentifier: 
   m_themeName: General
-  SerializedGuid: 5ce9722b6df40540b592c0cb198f99ce
+  SerializedGuid: db9f893731311e4d8fb6b867a8f855d1
   m_activeVariant:
     m_variantName: Default
-    SerializedGuid: c080f5d5230ae54e86c095f297ad076b
+    SerializedGuid: d4e2986186cfe0408fe5f534fb758321
     Colors:
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 5d0ce22faa1f004c8051070c8aee78ca
+      SerializedGuid: 147452d0b2b015449bf626a528794bda
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 2fd85959fa88f3418a6dbccf85f12f42
+      SerializedGuid: e651093bff899345b5f97aa4adfa74e8
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 9147ed33f8994e4eb6562bb53d1ac9cc
+      SerializedGuid: dbf858700216f240a3866648291d0eb3
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 2816771e9dce0f4c81ec041a11a86679
+      SerializedGuid: 07dd7e7119bb2847a78c838adf011df3
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 01846bc95d1d9247850ad79a95cc8015
+      SerializedGuid: 1d36410596e3d742ac54e6e7d06276a8
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 428ea2c40690f84c82395477ea328ab7
+      SerializedGuid: 62e95d1ea0117d4fbf1ea2b1f770de0c
     Sprites: []
     Textures: []
     Fonts: []
     FontAssets: []
   ColorLabels:
   - m_label: Primary
-    SerializedGuid: 5d0ce22faa1f004c8051070c8aee78ca
+    SerializedGuid: 147452d0b2b015449bf626a528794bda
   - m_label: Secondary
-    SerializedGuid: 2fd85959fa88f3418a6dbccf85f12f42
+    SerializedGuid: e651093bff899345b5f97aa4adfa74e8
   - m_label: Accent 1
-    SerializedGuid: 9147ed33f8994e4eb6562bb53d1ac9cc
+    SerializedGuid: dbf858700216f240a3866648291d0eb3
   - m_label: Accent 2
-    SerializedGuid: 2816771e9dce0f4c81ec041a11a86679
+    SerializedGuid: 07dd7e7119bb2847a78c838adf011df3
   - m_label: Text
-    SerializedGuid: 01846bc95d1d9247850ad79a95cc8015
+    SerializedGuid: 1d36410596e3d742ac54e6e7d06276a8
   - m_label: Disabled
-    SerializedGuid: 428ea2c40690f84c82395477ea328ab7
+    SerializedGuid: 62e95d1ea0117d4fbf1ea2b1f770de0c
   SpriteLabels: []
   TextureLabels: []
   FontLabels: []
@@ -55,20 +55,20 @@ MonoBehaviour:
   - Default
   Variants:
   - m_variantName: Default
-    SerializedGuid: c080f5d5230ae54e86c095f297ad076b
+    SerializedGuid: d4e2986186cfe0408fe5f534fb758321
     Colors:
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 5d0ce22faa1f004c8051070c8aee78ca
+      SerializedGuid: 147452d0b2b015449bf626a528794bda
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 2fd85959fa88f3418a6dbccf85f12f42
+      SerializedGuid: e651093bff899345b5f97aa4adfa74e8
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 9147ed33f8994e4eb6562bb53d1ac9cc
+      SerializedGuid: dbf858700216f240a3866648291d0eb3
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 2816771e9dce0f4c81ec041a11a86679
+      SerializedGuid: 07dd7e7119bb2847a78c838adf011df3
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 01846bc95d1d9247850ad79a95cc8015
+      SerializedGuid: 1d36410596e3d742ac54e6e7d06276a8
     - m_color: {r: 1, g: 1, b: 1, a: 1}
-      SerializedGuid: 428ea2c40690f84c82395477ea328ab7
+      SerializedGuid: 62e95d1ea0117d4fbf1ea2b1f770de0c
     Sprites: []
     Textures: []
     Fonts: []

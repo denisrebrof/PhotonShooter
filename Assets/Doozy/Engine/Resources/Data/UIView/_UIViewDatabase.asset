@@ -16,9 +16,13 @@ MonoBehaviour:
   CategoryNames:
   - Custom
   - General
-  - MainMenu
-  - Gameplay
+  - LevelCompleted
+  - Levels
+  - Social
+  - Store
   Categories:
-  - {fileID: 11400000, guid: 942b0e580e8a6544ba9d004fd1efe1d5, type: 2}
-  - {fileID: 11400000, guid: 0f7ab8679a1909f4cab71dbb20748aa9, type: 2}
-  - {fileID: 11400000, guid: 4eb53f7176002b8438878e8eec017bee, type: 2}
+  - {fileID: 11400000, guid: 9b4aa2d29a84d2a4fa9909b66bc84fab, type: 2}
+  - {fileID: 11400000, guid: 6116c6092a3c693478e121e2bcd2c8bd, type: 2}
+  - {fileID: 11400000, guid: 665eae5527d250f46932444714731839, type: 2}
+  - {fileID: 11400000, guid: ccb2dcee67b07a346b93f41a5265082d, type: 2}
+  - {fileID: 11400000, guid: 059b276d160f5604da44a0d4dc802833, type: 2}

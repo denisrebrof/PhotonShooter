@@ -3,6 +3,7 @@ using Movement.domain;
 using Movement.domain.model;
 using UniRx;
 using Utils;
+using Utils.Reactive;
 
 namespace Movement.data
 {

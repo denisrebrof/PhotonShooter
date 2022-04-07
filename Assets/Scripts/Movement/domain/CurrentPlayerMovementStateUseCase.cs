@@ -1,13 +1,13 @@
-﻿using CharacterInput.domain;
-using CharacterInput.domain.model;
-using Movement.domain.model;
+﻿using Movement.domain.model;
+using PlayerInput.domain;
+using PlayerInput.domain.model;
 using Zenject;
 
 namespace Movement.domain
 {
     public class CurrentPlayerMovementStateUseCase
     {
-        [Inject] private CharacterInputUseCase inputUseCase;
+        [Inject] private PlayerInputUseCase inputUseCase;
         [Inject] private IJumpingStateRepository jumpingStateRepository;
 
         public MovementState GetCurrentMovementState()

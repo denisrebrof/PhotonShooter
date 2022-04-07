@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
-using CharacterInput.domain;
-using CharacterInput.domain.model;
+using PlayerInput.domain;
+using PlayerInput.domain.model;
 using UniRx;
 using UnityEngine;
 using Zenject;
@@ -10,7 +10,7 @@ namespace Movement.presentation
 {
     public class FirstPersonMovement : MonoBehaviour
     {
-        [Inject] private CharacterInputUseCase inputUseCase;
+        [Inject] private PlayerInputUseCase inputUseCase;
 
         public float speed = 5;
         private Vector2 velocity;

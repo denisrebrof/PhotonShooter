@@ -1,6 +1,7 @@
 ﻿using UniRx;
 using UnityEngine;
 using Utils;
+using Utils.Common;
 using Weapons.domain;
 using Zenject;
 using static Weapons.domain.ScrollWeaponsUseCase;

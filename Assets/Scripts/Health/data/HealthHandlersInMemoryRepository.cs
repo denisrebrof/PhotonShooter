@@ -2,6 +2,7 @@
 using Health.domain.repositories;
 using UniRx;
 using Utils;
+using Utils.Reactive;
 
 namespace Health.data
 {

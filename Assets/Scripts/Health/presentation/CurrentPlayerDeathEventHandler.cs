@@ -10,7 +10,7 @@ namespace Health.presentation
     public class CurrentPlayerDeathEventHandler : MonoBehaviour
     {
         [Inject] private CurrentPlayerDeathEventUseCase deathEventUseCase;
-        [Inject] private ICurrentPlayerLifecycleEventRepository lifecycleEventRepository;
+        [Inject] private IPlayerLifecycleEventRepository lifecycleEventRepository;
 
         private void Awake() => deathEventUseCase
             .GetDeathEventFlow()

@@ -2,31 +2,30 @@
 using MatchState.data;
 using MatchState.domain;
 using MatchState.domain.repositories;
+using MatchState.presentation.SyncHandler;
+using MatchTimer.data;
+using MatchTimer.domain.repositories;
 using UnityEngine;
 using Zenject;
 
 namespace MatchState._di
 {
     [CreateAssetMenu(fileName = "MatchStateBaseInstaller", menuName = "Installers/MatchStateBaseInstaller", order = 0)]
-    public class MatchStateBaseInstaller : ScriptableObjectInstaller
+    internal class MatchStateBaseInstaller : ScriptableObjectInstaller
     {
         // ReSharper disable once InconsistentNaming
-        [SerializeField] private MatchTimersDurationScriptableObjectRepository timersSORepository;
-        
+        [SerializeField] private MatchStateDurationScriptableObjectRepository stateSoRepository;
         public override void InstallBindings()
         {
             //Data
-            Container.Bind<IMatchStateRepository>().To<MatchStateInMemoryRepository>().AsSingle();
-            Container.Bind<IMatchTimersDurationRepository>().FromInstance(timersSORepository).AsSingle();
-            Container.Bind<IMatchTimerRepository>().To<MatchTimerSceneRepository>().FromNewComponentOnNewGameObject().AsSingle();
-            //Domain
+            Container.Bind<IMatchStateDurationRepository>().FromInstance(stateSoRepository).AsSingle();
+            Container.Bind<IMatchStateRepository>().To<MatchStateInMemoryRepository>().AsSingle();//Domain
             Container.Bind<MatchStateUpdatesUseCase>().ToSelf().AsSingle();
-            Container.Bind<GetNextMatchStateUseCase>().ToSelf().AsSingle();
-            Container.Bind<GetTimerStateFlowUseCase>().ToSelf().AsSingle();
-            Container.Bind<MatchStateDurationUseCase>().ToSelf().AsSingle();
+            Container.Bind<NextMatchStateUseCase>().ToSelf().AsSingle();
+            Container.Bind<MatchStateTimerStateFlowUseCase>().ToSelf().AsSingle();
             Container.Bind<StartMatchStateUseCase>().ToSelf().AsSingle();
-            Container.Bind<StartNextMatchStateUseCase>().ToSelf().AsSingle();
-            Container.Bind<TimerCompletedEventFlowUseCase>().ToSelf().AsSingle();
+            //Presentation
+            Container.Bind<RoomMatchStateParamsNavigator>().ToSelf().AsSingle();
         }
     }
 }

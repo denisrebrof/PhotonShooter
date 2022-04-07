@@ -9,7 +9,7 @@ namespace Health.presentation
 {
     public class RestoreHealthOnSpawnHandler : MonoBehaviour
     {
-        [Inject] private ICurrentPlayerLifecycleEventRepository lifecycleEventRepository;
+        [Inject] private IPlayerLifecycleEventRepository lifecycleEventRepository;
         [Inject] private RestoreHealthUseCase restoreHealthUseCase;
 
         private void Awake() => lifecycleEventRepository

@@ -1,7 +1,7 @@
 ﻿using System;
 using Ammo.presentation.navigator;
-using CharacterInput.domain;
-using CharacterInput.domain.model;
+using PlayerInput.domain;
+using PlayerInput.domain.model;
 using UniRx;
 using UnityEngine;
 using Zenject;
@@ -12,7 +12,7 @@ namespace Ammo.presentation
     {
         
         [Inject] private ReloadNavigator navigator;
-        [Inject] private CharacterInputUseCase inputUseCase;
+        [Inject] private PlayerInputUseCase inputUseCase;
 
         private void Update()
         {

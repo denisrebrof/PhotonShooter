@@ -1,6 +1,7 @@
 ﻿using System;
 using UnityEngine;
 using Utils;
+using Utils.Photon;
 using Zenject;
 
 namespace Shooting.presentation.SimpleShooter

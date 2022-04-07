@@ -2,7 +2,7 @@
 {
     public enum PlayerLifecycleEvent
     {
-        ReadyToSpawn,
+        Ready,
         Spawned,
         Died
     }

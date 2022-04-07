@@ -6,7 +6,7 @@ namespace MatchState.domain
     public class StartNextMatchStateUseCase
     {
         [Inject] private StartMatchStateUseCase startMatchStateUseCase;
-        [Inject] private GetNextMatchStateUseCase getNextMatchStateUseCase;
+        [Inject] private NextMatchStateUseCase getNextMatchStateUseCase;
         [Inject] private IMatchStateRepository matchStateRepository;
 
         public void StartNextMatchState()

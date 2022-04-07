@@ -13,15 +13,18 @@ namespace PlayerState._di
         {
             //Data
             Container
-                .Bind<ICurrentPlayerLifecycleEventRepository>()
-                .To<CurrentPlayerLifecycleEventInMemoryRepository>()
+                .Bind<IPlayerLifecycleEventRepository>()
+                .To<PlayerLifecycleEventInMemoryRepository>()
                 .AsSingle();
+            
+            var stateRepository = FindObjectOfType<PlayerStateSceneRepository>();
             Container
-                .Bind<ICurrentPlayerStateRepository>()
-                .To<CurrentPlayerStateInMemoryRepository>()
+                .Bind<IPlayerStateRepository>()
+                .FromInstance(stateRepository)
                 .AsSingle();
+            
             //Domain
-            Container.Bind<CurrentPlayerStateUpdatesUseCase>().ToSelf().AsSingle();
+            Container.Bind<PlayerStateUpdatesUseCase>().ToSelf().AsSingle();
         }
     }
 }

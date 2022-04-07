@@ -4,6 +4,7 @@ using CharacterInput.domain.repositories;
 using UniRx;
 using UnityEngine;
 using Utils;
+using Utils.Common;
 
 namespace CharacterInput.data
 {

@@ -1,5 +1,5 @@
-﻿using CharacterInput.domain;
-using CharacterInput.domain.model;
+﻿using PlayerInput.domain;
+using PlayerInput.domain.model;
 using UnityEngine;
 using Zenject;
 
@@ -7,7 +7,7 @@ namespace Movement.presentation
 {
     public class FirstPersonLook : MonoBehaviour
     {
-        [Inject] private CharacterInputUseCase inputUseCase;
+        [Inject] private PlayerInputUseCase inputUseCase;
 
         [SerializeField] Transform character;
         private Vector2 currentMouseLook;

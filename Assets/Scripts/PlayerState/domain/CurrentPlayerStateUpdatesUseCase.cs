@@ -33,7 +33,7 @@ namespace PlayerState.domain
         {
             PlayerLifecycleEvent.Spawned => PlayerStates.Playing,
             PlayerLifecycleEvent.Died => PlayerStates.Dead,
-            PlayerLifecycleEvent.ReadyToSpawn => PlayerStates.Spawning,
+            PlayerLifecycleEvent.Ready => PlayerStates.Spawning,
             _ => throw new ArgumentOutOfRangeException(nameof(lifecycleEvent), lifecycleEvent, null)
         };
     }

@@ -1,6 +1,7 @@
 ﻿using System;
 using MatchState.domain.model;
 using MatchState.domain.repositories;
+using MatchTimer.domain.repositories;
 using UniRx;
 using Zenject;
 
@@ -25,18 +26,6 @@ namespace MatchState.domain
         {
             var time = isCorrectState ? timeLeft : 0;
             return new TimerState(isCorrectState, time);
-        }
-
-        public struct TimerState
-        {
-            public bool IsActive;
-            public int TimeLeft;
-
-            public TimerState(bool isActive, int timeLeft)
-            {
-                this.IsActive = isActive;
-                this.TimeLeft = timeLeft;
-            }
         }
     }
 }

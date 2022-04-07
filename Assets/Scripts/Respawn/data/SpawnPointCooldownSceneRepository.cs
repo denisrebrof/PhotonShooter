@@ -4,6 +4,7 @@ using Respawn.domain.repositories;
 using UniRx;
 using UnityEngine;
 using Utils;
+using Utils.Reactive;
 
 namespace Respawn.data
 {

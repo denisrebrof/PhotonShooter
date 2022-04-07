@@ -5,6 +5,7 @@ using Photon.Pun;
 using UniRx;
 using UnityEngine;
 using Utils;
+using Utils.Photon;
 using Zenject;
 
 namespace Movement.presentation

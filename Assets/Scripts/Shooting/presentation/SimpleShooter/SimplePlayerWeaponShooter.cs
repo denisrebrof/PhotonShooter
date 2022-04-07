@@ -4,6 +4,7 @@ using Shooting.domain;
 using UnityEngine;
 using UnityEngine.Events;
 using Utils;
+using Utils.Photon;
 using Weapons.domain.repositories;
 using Zenject;
 

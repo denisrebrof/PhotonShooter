@@ -9,10 +9,10 @@ namespace Health.domain
     {
         [Inject] private ICurrentPlayerHealthRepository repository;
 
-        public IObservable<Unit> GetDeathEventFlow() => repository
+        public ReactiveCommand GetDeathEventFlow() => repository
             .GetHealthFlow()
             .DistinctUntilChanged()
-            .Where(health => health == 0)
-            .AsUnitObservable();
+            .Select(health => health == 0)
+            .ToReactiveCommand();
     }
 }

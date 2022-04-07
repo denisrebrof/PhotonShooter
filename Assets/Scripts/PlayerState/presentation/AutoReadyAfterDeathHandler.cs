@@ -18,7 +18,7 @@ namespace PlayerState.presentation
             .Select(GetBecomeReadyDelay)
             .Switch()
             .Subscribe(_ =>
-                lifecycleEventRepository.SendLifecycleEvent(PlayerLifecycleEvent.ReadyToSpawn)
+                lifecycleEventRepository.SendLifecycleEvent(PlayerLifecycleEvent.Ready)
             ).AddTo(this);
 
         private IObservable<Unit> GetBecomeReadyDelay(PlayerStates state) => state == PlayerStates.Dead
